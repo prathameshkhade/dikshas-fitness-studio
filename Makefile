@@ -62,3 +62,16 @@ passwd:
 # ——————————————————————————
 
 # target deploy - for running the django project from docker-compose
+
+# ——————————————————————————
+# Git and GitHub:-
+# ——————————————————————————
+# target add - for adding all the files in git repo
+add: 
+	git add .
+
+# target commit - for adding all the files in git repo
+title=""
+des=""
+commit: add
+	git commit -am $title -m $des
