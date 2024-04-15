@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>
+        {% block title %} Diksha's Fitness Studio {% endblock title %}
+    </title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Ahana Yoga HTML Template">
+	<meta name="keywords" content="yoga, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="static/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="static/css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="static/css/nice-select.css"/>
+	<link rel="stylesheet" href="static/css/magnific-popup.css"/>
+	<link rel="stylesheet" href="static/css/slicknav.min.css"/>
+	<link rel="stylesheet" href="static/css/animate.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="static/css/style.css"/>
+
+    {% block morehead %}  {% endblock morehead %}
+
+</head>
+
+<body>
+
+    {% include "header.html" %}
+
+    {% block content %}
+    
+    {% endblock content %}
+
+    {% include "footer.html" %}
+
+
+
+    <!--====== Javascripts & Jquery ======-->
+	<script src="static/js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="static/js/jquery.slicknav.min.js"></script>
+	<script src="static/js/owl.carousel.min.js"></script>
+	<script src="static/js/jquery.nice-select.min.js"></script>
+	<script src="static/js/jquery-ui.min.js"></script>
+	<script src="static/js/jquery.magnific-popup.min.js"></script>
+	<script src="static/js/main.js"></script>
+
+</body>
