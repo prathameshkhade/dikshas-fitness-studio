@@ -1,0 +1,79 @@
+/*------------------
+  Pricing section
+---------------------*/
+.pricing-section {
+    background: #f9f2f0;
+}
+
+.pricing-item {
+    text-align: center;
+    background: #fff;
+    padding-bottom: 40px;
+    margin: 15px 0;
+    border-radius: 13px;
+    overflow: hidden;
+    @include box-shadow(0px 5px 6px rgba(72, 105, 114, 0.15));
+    @include transition(all 0.4s);
+    &:hover {
+        @include box-shadow(0px 12px 32px rgba(72, 105, 114, 0.15));
+    }
+    .pi-top {
+        height: 156px;
+        padding-top: 26px;
+        background: $primary_color;
+        h4 {
+            font-family: $font_2;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+    .pi-price {
+        width: 144px;
+        height: 144px;
+        margin: -71px auto 30px;
+        padding-top: 35px;
+        border-radius: 50%;
+        background: #fff;
+        @include box-shadow(0px 5px 6px rgba(72, 105, 114, 0.15));
+        h3 {
+            font-size: 40px;
+            font-weight: 700;
+            color: $p_color;
+        }
+        p {
+            text-transform: uppercase;
+            color: #999999;
+        }
+    }
+    ul {
+        list-style: none;
+        margin-bottom: 20px;
+        li {
+            font-size: 16px;
+            color: $p_color;
+            margin-bottom: 12px;
+        }
+    }
+    &.begginer {
+        .pi-top {
+            background: #fdb07d;
+        }
+    }
+    &.entermediate {
+        .pi-top {
+            background: #fa8f70;
+        }
+    }
+    &.advanced {
+        .pi-top {
+            background: #f2786f;
+        }
+    }
+    &.professional {
+        .pi-top {
+            background: #f65d5d;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+/*------------------
+  Sign up section
+---------------------*/
+.signup-map {
+    position: relative;
+    height: 100%;
+    background: #ddd;
+    border-radius: 12px;
+    @include box-shadow(0px 12px 32px rgba(72, 105, 114, 0.15));
+    overflow: hidden;
+    @media #{$tab_device,$large_mobile,$small_mobile} {
+        height: 400px;
+        margin-bottom: 40px;
+    }
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}
+.singup-text {
+    padding-right: 50px;
+    margin-bottom: 40px;
+    h3 {
+        font-weight: 400;
+        font-family: $font_2;
+        margin-bottom: 15px;
+    }
+}
+
+.singup-form {
+    input,
+    textarea {
+        width: 100%;
+        height: 49px;
+        padding: 5px 28px;
+        font-size: 14px;
+        color: #999999;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        border: 1px solid #e6e6e6;
+        background: #fafafa;
+    }
+    textarea {
+        height: 140px;
+        padding: 15px 28px 10px;
+        border-radius: 20px;
+        resize: none;
+    }
+}

@@ -1,0 +1,133 @@
+/*---------------------
+  Trainer details page
+-----------------------*/
+.trainer-details {
+    padding: 40px 52px;
+    border-radius: 13px;
+    @include box-shadow(0px 5px 6px rgba(72, 105, 114, 0.15));
+    @media #{$xs_mobile} {
+        padding: 30px 20px;
+    }
+    .td-left {
+        float: left;
+        margin-right: 55px;
+        text-align: center;
+        @media #{$tab_device,$large_mobile,$small_mobile} {
+            float: none;
+            margin-right: 0;
+        }
+    }
+    .td-right {
+        overflow: hidden;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    .td-social {
+        margin-bottom: 30px;
+        a {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            padding-top: 6px;
+            margin-right: 6px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            text-align: center;
+            color: $heading_color;
+            background: #f2f4f5;
+            border-radius: 50%;
+            @include transition(all 0.2s);
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                color: #fff;
+                background: $primary_color;
+            }
+        }
+    }
+    .trainer-info {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 28px;
+        }
+        h3 {
+            font-family: $font_2;
+            margin-bottom: 15px;
+        }
+        h6 {
+            color: $primary_color;
+            margin-bottom: 16px;
+        }
+        ul {
+            list-style: none;
+            li {
+                margin-bottom: 5px;
+                @media #{$xs_mobile} {
+                    margin-bottom: 15px;
+                }
+            }
+            strong {
+                float: left;
+                width: 112px;
+                color: #666666;
+                font-weight: 600;
+                @media #{$xs_mobile} {
+                    float: none;
+                    margin-bottom: 10px;
+                    display: block;
+                }
+            }
+            p {
+                font-size: 16px;
+                overflow: hidden;
+                margin-bottom: 0;
+            }
+        }
+        .site-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            @media #{$large_mobile,$small_mobile} {
+                position: relative;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.trainer-details-text {
+    h3 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    p {
+        margin-bottom: 22px;
+        font-size: 16px;
+    }
+    ul {
+        list-style: none;
+        padding-left: 32px;
+        @media #{$xs_mobile} {
+            padding-left: 15px;
+        }
+        li {
+            font-size: 16px;
+            color: $p_color;
+            padding-left: 21px;
+            margin-bottom: 5px;
+            position: relative;
+        }
+        i {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            font-size: 16px;
+            color: $primary_color;
+        }
+    }
+}

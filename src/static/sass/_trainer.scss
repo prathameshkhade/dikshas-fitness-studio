@@ -1,0 +1,143 @@
+/*------------------
+  Trainer section
+---------------------*/
+.trainer-section  {
+   padding-bottom: 80px;
+}
+.trainer-slider{
+    margin: 0 -30px;
+    @media #{$tab_device, $large_mobile,$small_mobile} {
+        margin: 0;
+    }
+    .ts-item {
+        padding: 80px 25px 0;
+        margin-bottom: 32px;
+    }
+    .owl-nav {
+        @media #{$medium_device, $big_screen,$tab_device,$large_mobile,$small_mobile} {
+            text-align: center;
+            padding-top: 50px;
+        }
+        .owl-prev,
+        .owl-next {
+            width: 48px;
+            height: 34px;
+            position: absolute;
+            top: 55%;
+            left: -100px;
+            @media #{$medium_device,$big_screen,$tab_device,$large_mobile,$small_mobile} {
+                position: relative;
+                left: 0;
+                top: 0;
+                margin: 0 10px;
+            }
+            &:after {
+                position: absolute;
+                content: url('../img/icons/arrow-circle.png');
+                left: 0;
+                top: 0;
+                transition: all 0.4s;
+            }
+            &:hover {
+                &:after {
+                    content: url('../img/icons/arrow-circle-c.png');
+                }
+            }
+        }
+        .owl-next {
+            left: auto;
+            right: -99px;
+            @media #{$medium_device,$big_screen,$tab_device,$large_mobile,$small_mobile} {
+                position: relative;
+                left: 0;
+                top: 0;
+                right: 0;
+            }
+            &:after {
+                transform: (rotate(180deg));
+                transform-origin: center;
+                top: -0.39em;
+            }
+        }
+    }
+}
+
+.trainer-item {
+    display: block;
+    position: relative;
+    padding: 70px 40px 40px;
+    @include box-shadow(0px 5px 6px rgba(72, 105, 114, 0.15));
+    border-radius: 14px;
+    @include transition(all 0.4s);
+    @media #{$medium_device,$large_mobile,$small_mobile} {
+        padding: 0 20px 40px;
+    }
+    .ti-img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @media #{$medium_device,$large_mobile,$small_mobile} {
+            position: relative;
+            text-align: center;
+            top: -30px;
+        }
+        img {
+            width: auto;
+            max-width: 290px;
+            @media #{$medium_device,$large_mobile,$small_mobile} {
+                margin: 0 auto;
+            }
+            @media #{$xs_mobile} {
+                max-width: 100%;
+            }
+        }
+    }
+    h4 {
+        font-weight: 400;
+        font-family: $font_2;
+        margin-bottom: 10px;
+    }
+    h6 {
+        color: $primary_color;
+        margin-bottom: 20px;
+    }
+    .ti-text {
+        max-width: 250px;
+        position: relative;
+        z-index: 99;
+        background: #fff;
+        @media #{$medium_device,$large_mobile,$small_mobile} {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+    .ti-social {
+        a {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            padding-top: 6px;
+            margin-right: 6px;
+            margin-bottom: 14px;
+            font-size: 15px;
+            text-align: center;
+            color: $heading_color;
+            background: #f2f4f5;
+            border-radius: 50%;
+            @include transition(all 0.2s);
+            &:hover {
+                color: #fff;
+                background: $primary_color;
+            }
+        }
+    }
+    &:hover {
+        @include box-shadow(0px 12px 32px rgba(72, 105, 114, 0.15));
+    }
+}
+
+.trainers-page-section {
+    .trainer-item{
+        margin-bottom: 90px;
+    }
+}

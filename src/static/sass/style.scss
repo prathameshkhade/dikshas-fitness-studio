@@ -1,0 +1,96 @@
+/* =================================
+------------------------------------
+  Ahana | Yoga HTML Template
+  Version: 1.0
+ ------------------------------------
+ ====================================*/
+ @import 'varriable';
+ @import '_mixins';
+
+
+
+
+// default
+@import 'default';
+
+// helper
+@import 'helper';
+
+//loader
+@import 'loader';
+ 
+// header
+@import 'header';
+
+// Infor Model
+@import 'infor';
+
+// slider
+@import 'slider';
+
+// search
+@import 'search';
+
+// About
+@import 'about';
+
+// Classes
+@import 'classes';
+
+// Trainer
+@import 'trainer';
+
+// Review
+@import 'review';
+
+// Event
+@import 'event';
+
+// Priceing
+@import 'priceing';
+
+// Sign up
+@import 'signup';
+
+// Gallery
+@import 'gallery';
+
+// Footer
+@import 'footer';
+
+// Other page
+@import 'other-page';
+
+// About page
+@import 'about-page';
+
+//  Classes details page
+@import 'classes-details';
+
+//  Trainer details page
+@import 'trainer-details';
+
+//  Event details page
+@import 'event-details';
+
+// Blog page
+@import 'blog-page';
+
+// Blog details
+@import 'blog-details';
+
+// Contact
+@import 'contact';
+
+
+ 
+ 
+ /* ----------------
+   Responsive
+ ---------------------*/
+ 
+ @media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+ }

@@ -1,0 +1,48 @@
+/*------------------
+  About section
+---------------------*/
+.about-item {
+    margin-bottom: 30px;
+    .ai-icon {
+        float: left;
+        width: 112px;
+        height: 112px;
+        border: 1px solid #f1f4f4;
+        margin-right: 20px;
+        border-radius: 50%;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center); 
+        @media #{$small_mobile} {
+            float: none;
+            margin-bottom: 20px;
+        }
+    }
+    .ai-text {
+        overflow: hidden;
+        padding-top: 10px;
+        h4 {
+            font-weight: 400;
+            font-family: $font_2;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+    }
+    &.icon-box {
+        text-align: center;
+        .ai-icon {
+            float: none;
+            margin: 0 auto 15px;
+        }
+    }
+}
+
+.about-img {
+    @media #{$tab_device,$large_mobile,$small_mobile} {
+        text-align: center;
+        margin-bottom: 50px;
+     }
+}

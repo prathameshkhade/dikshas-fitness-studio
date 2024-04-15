@@ -1,0 +1,78 @@
+
+/* buttons */
+.site-btn {
+    display: inline-block;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 167px;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: normal;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    &:hover {
+        color: #fff;
+    }
+    &.sb-white {
+        background: #fff;
+        color: $primary_color;
+    }
+    &.sb-gradient {
+        color: $white_color;
+        padding: 13px 29px;
+        position: relative;
+        @extend .bg-g-2;
+        @include transition(all 0.4s);
+        z-index: 1;
+        &::after {
+            content: '';
+            position: absolute;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            top: 2px;
+            left: 2px;
+            border-radius: 80px;
+            background: #fff;
+            z-index: -1;
+            @include opacity(0);
+            @include transition(all 0.4s);
+        }
+        &:hover {
+            color: $primary_color;
+            &:after {
+                @include opacity(1);
+            }
+        }
+    }
+    &.sb-line-gradient {
+        color: $primary_color;
+        padding: 13px 29px;
+        position: relative;
+        @extend .bg-g-2;
+        @include transition(all 0.4s);
+        z-index: 1;
+        &::after {
+            content: '';
+            position: absolute;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            top: 2px;
+            left: 2px;
+            border-radius: 80px;
+            background: #fff;
+            z-index: -1;
+            @include opacity(1);
+            @include transition(all 0.4s);
+        }
+        &:hover {
+            color: #fff;
+            &:after {
+                @include opacity(0);
+            }
+        }
+    }
+}

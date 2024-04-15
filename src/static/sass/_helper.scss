@@ -1,0 +1,65 @@
+/*---------------------
+   Helper CSS
+ -----------------------*/
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+    img {
+        margin-bottom: 15px;
+    }
+    h2 {
+        font-weight: 400;
+        font-size: 38px;
+        font-family: $font_2;
+        text-transform: uppercase;
+    }
+    p{
+        padding-top: 15px;
+        margin-bottom: 0;
+    }
+}
+
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.spad {
+    padding-top: 110px;
+    padding-bottom: 105px;
+}
+
+.text-white {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    li,
+    a {
+        color: #fff;
+    }
+}
+
+.bg-g-1 {
+    background: -moz-linear-gradient(145deg, rgba(246,93,93,1) 0%, rgba(253,176,125,1) 100%);
+    background: -webkit-linear-gradient(145deg, rgba(246,93,93,1) 0%, rgba(253,176,125,1) 100%);
+    background: linear-gradient(145deg, rgba(246,93,93,1) 0%, rgba(253,176,125,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f65d5d",endColorstr="#fdb07d",GradientType=1);
+}
+
+.bg-g-2 {
+    background: -moz-linear-gradient(145deg, rgba(253,176,125,1) 0%, rgba(246,93,93,1) 100%);
+    background: -webkit-linear-gradient(145deg, rgba(253,176,125,1) 0%, rgba(246,93,93,1) 100%);
+    background: linear-gradient(145deg, rgba(253,176,125,1) 0%, rgba(246,93,93,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdb07d",endColorstr="#f65d5d",GradientType=1);
+}
+
+/*---------------------
+  Commom elements
+-----------------------*/
+@import 'buttons';

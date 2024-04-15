@@ -1,0 +1,88 @@
+/*----------------------------------------*/
+/* Template default CSS
+/*----------------------------------------*/
+
+// Google Font load
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Playfair+Display:400,400i,700,700i&display=swap');
+
+// Material Icon
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+ html,
+ body {
+	 height: 100%;
+	 font-family: $font_1;
+	 -webkit-font-smoothing: antialiased;
+	 font-smoothing: antialiased;
+ }
+ 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+	 margin: 0;
+	 color: $heading_color;
+	 font-weight: 600;
+ }
+ 
+ h1 {
+	 font-size: 70px;
+ }
+ 
+ h2 {
+	 font-family: $font_2;
+	 font-weight: 400;
+	 font-size: 36px;
+ }
+ 
+ h3 {
+	 font-size: 30px;
+	 font-family: $font_2;
+	 font-weight: 400;
+ }
+ 
+ h4 {
+	 font-size: 25px;
+ }
+ 
+ h5 {
+	 font-size: 18px;
+ }
+ 
+ h6 {
+	 font-size: 16px;
+ }
+ 
+ p {
+	 font-size: 15px;
+	 color: $p_color;
+	 line-height: 1.8;
+ }
+ 
+ img {
+	 max-width: 100%;
+ }
+ 
+ input,
+ select,
+ button,
+ textarea {
+	 &:focus {
+		 outline: none;
+	 }
+ }
+ 
+ a:hover,
+ a:focus {
+	 text-decoration: none;
+	 outline: none;
+ }
+ 
+ ul,
+ ol {
+	 padding: 0;
+	 margin: 0;
+ }

@@ -1,0 +1,75 @@
+/*--------------
+  About Page
+-----------------*/
+.service-section {
+    padding-bottom: 80px;
+}
+.wwd-section {
+    background-color: #f9f2f0;
+    @media #{$tab_device,$large_mobile,$small_mobile} {
+        background-position: right center;
+    }
+}
+.wwd-text {
+    padding-left: 100px;
+    @media #{$tab_device,$large_mobile,$small_mobile} {
+       padding-left: 0;
+    }
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    p {
+        margin-bottom: 40px;
+    }
+}
+.single-progress-item {
+	margin-bottom: 40px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	p {
+        font-size: 16px;
+        color: $heading_color;
+		line-height: 1;
+		margin-bottom: 15px;
+	}
+	.progress-bar-style {
+		height: 8px;
+		width: 100%;
+		background: #fdb07d;
+		border-radius: 15px;
+		.bar-inner {
+			position: relative;
+			height: 100%;
+			border-radius: 15px;
+			span {
+				position: absolute;
+				bottom: 100%;
+				right: -18px;
+				font-size: 14px;
+				color: #fff;
+				line-height: 1;
+                margin-bottom: 15px;
+                padding: 3px 7px;
+                border-radius: 3px;
+                background: $primary_color;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    height: 8px;
+                    width: 8px;
+                    left: calc(50% - 4px);
+                    bottom: -4px;
+                    transform: rotate(45deg);
+                    background: $primary_color;
+                }
+
+			}
+		}
+	}
+}
+
+.about-blog-section {
+    padding-bottom: 80px;
+}
