@@ -336,7 +336,7 @@ ol {
 ---------------------*/
 
 .header-section {
-	position: absolute;
+	position: static;
 	width: 100%;
 	top: 0;
 	left: 0;
