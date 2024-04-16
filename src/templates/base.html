@@ -32,12 +32,13 @@
 		<div class="loader"></div>
 	</div>
 
+	
+    {% include "header.html" %}
+	
 	{% include "home.html" %}
 
-    {% include "header.html" %}
-
     {% block content %}
-        <h1 align="center"> Inside the base.html </h1>
+        <h1 align="center"> Inside base </h1>
     {% endblock content %}
 
     {% include "footer.html" %}
