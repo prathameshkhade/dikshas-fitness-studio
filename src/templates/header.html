@@ -48,19 +48,19 @@
         <div class="container">
             <ul class="main-menu">
                 <li><a href="{% url "homepage" %}" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="{% url "about" %}">About</a></li>
                 <li><a href="classes.html">Classes</a>
                     <ul class="sub-menu">
                         <li><a href="classes.html">Our Claasses</a></li>
                         <li><a href="classes-details.html">Claasses Details</a></li>
                     </ul>
                 </li>
-                <li><a href="trainer.html">trainers</a>
+                {% comment %} <li><a href="trainer.html">trainers</a>
                     <ul class="sub-menu">
                         <li><a href="trainer.html">Our Trainers</a></li>
                         <li><a href="trainer-details.html">Trainers Details</a></li>
                     </ul>
-                </li>
+                </li> {% endcomment %}
                 <li><a href="events.html">events</a>
                     <ul class="sub-menu">
                         <li><a href="events.html">Our Events</a></li>

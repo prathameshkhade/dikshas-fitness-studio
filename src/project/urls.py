@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path
 
 # Custom imports
-from .views import homepage_view, contact_view
+from .views import homepage_view, contact_view, about_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage_view, name="homepage"),
     path('contact/', contact_view, name="contact"),
+    path('about/', about_view, name="about"),
 
 ]
