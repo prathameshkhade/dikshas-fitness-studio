@@ -47,7 +47,7 @@
         </div>
         <div class="container">
             <ul class="main-menu">
-                <li><a href="/" class="active">Home</a></li>
+                <li><a href="{% url "homepage" %}" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="classes.html">Classes</a>
                     <ul class="sub-menu">
@@ -73,7 +73,7 @@
                         <li><a href="single-blog.html">Blog Details</a></li>
                     </ul>
                 </li> {% endcomment %}
-                <li><a href="/contact/">Contact</a></li>
+                <li><a href="{% url "contact" %}">Contact</a></li>
             </ul>
         </div>
     </div>
