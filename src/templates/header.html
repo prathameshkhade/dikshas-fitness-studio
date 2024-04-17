@@ -1,3 +1,5 @@
+{% load static %}
+
 <!-- Header Section -->
 <header class="header-section">
     <div class="header-top">
@@ -33,19 +35,19 @@
     </div>
     <div class="header-bottom">
         <a href="" class="site-logo">
-            <img src="static/img/logo.png" alt="homepage">
+            <img src="{% static 'img/logo.png' %}" alt="homepage">
         </a>
         <div class="hb-right">
             <div class="hb-switch" id="search-switch">
-                <img src="static/img/icons/search.png" alt="">
+                <img src="{% static 'img/icons/search.png' %}" alt="">
             </div>
             <div class="hb-switch" id="infor-switch">
-                <img src="static/img/icons/bars.png" alt="">
+                <img src="{% static 'img/icons/bars.png' %}" alt="">
             </div>
         </div>
         <div class="container">
             <ul class="main-menu">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="/" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="classes.html">Classes</a>
                     <ul class="sub-menu">

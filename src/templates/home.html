@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
     <!-- Infor Model -->
@@ -10,13 +12,13 @@
 			</div>
 			<div class="infor-middle">
 				<a href="#" class="infor-logo">
-					<img src="static/img/logo-2.png" alt="">
+					<img src="{% static 'img/logo-2.png' %}" alt="">
 				</a>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
 				<div class="insta-imgs">
 					<div class="insta-item">
 						<div class="insta-img">
-							<img src="static/img/infor/1.jpg" alt="">
+							<img src="{% static 'img/infor/1.jpg' %}" alt="">
 							<div class="insta-hover">
 								<i class="fa fa-instagram"></i>
 								<p>ahana.yoga</p>
@@ -25,7 +27,7 @@
 					</div>
 					<div class="insta-item">
 						<div class="insta-img">
-							<img src="static/img/infor/2.jpg" alt="">
+							<img src="{% static 'img/infor/2.jpg' %}" alt="">
 							<div class="insta-hover">
 								<i class="fa fa-instagram"></i>
 								<p>ahana.yoga</p>
@@ -34,7 +36,7 @@
 					</div>
 					<div class="insta-item">
 						<div class="insta-img">
-							<img src="static/img/infor/3.jpg" alt="">
+							<img src="{% static 'img/infor/3.jpg' %}" alt="">
 							<div class="insta-hover">
 								<i class="fa fa-instagram"></i>
 								<p>ahana.yoga</p>
@@ -43,7 +45,7 @@
 					</div>
 					<div class="insta-item">
 						<div class="insta-img">
-							<img src="static/img/infor/4.jpg" alt="">
+							<img src="{% static 'img/infor/4.jpg' %}" alt="">
 							<div class="insta-hover">
 								<i class="fa fa-instagram"></i>
 								<p>ahana.yoga</p>
@@ -52,7 +54,7 @@
 					</div>
 					<div class="insta-item">
 						<div class="insta-img">
-							<img src="static/img/infor/5.jpg" alt="">
+							<img src="{% static 'img/infor/5.jpg' %}" alt="">
 							<div class="insta-hover">
 								<i class="fa fa-instagram"></i>
 								<p>ahana.yoga</p>
@@ -61,7 +63,7 @@
 					</div>
 					<div class="insta-item">
 						<div class="insta-img">
-							<img src="static/img/infor/6.jpg" alt="">
+							<img src="{% static 'img/infor/6.jpg' %}" alt="">
 							<div class="insta-hover">
 								<i class="fa fa-instagram"></i>
 								<p>ahana.yoga</p>
@@ -71,7 +73,7 @@
 				</div>
 				<form class="infor-form">
 					<input type="text" placeholder="Your Email">
-					<button><img src="static/img/icons/send.png" alt=""></button>
+					<button><img src="{% static 'img/icons/send.png' %}" alt=""></button>
 				</form>
 				<div class="insta-social">
 					<a href="#"><i class="fa fa-linkedin"></i></a>
@@ -95,12 +97,12 @@
 			</div>
 		</div>
 		<div class="arrow-buttom">
-			<img src="static/img/icons/arrows-buttom.png" alt="">
+			<img src="{% static 'img/icons/arrows-buttom.png' %}" alt="">
 		</div>
 		<div class="hero-slider owl-carousel">
 			<div class="hs-item">
 				<div class="hs-style-1 text-center">
-					<img src="static/img/hero-slider/1.png" alt="">
+					<img src="{% static 'img/hero-slider/1.png' %}" alt="">
 				</div>
 			</div>
 			<div class="hs-item">
@@ -109,7 +111,7 @@
 						<div class="row h-100">
 							<div class="col-lg-6 h-100 d-none d-lg-flex align-items-xl-end align-items-lg-center">
 								<div class="hs-img">
-									<img src="static/img/hero-slider/2.png" alt="">
+									<img src="{% static 'img/hero-slider/2.png' %}" alt="">
 								</div>
 							</div>
 							<div class="col-lg-6 d-flex align-items-center">
@@ -135,7 +137,7 @@
 						</div>
 					</div>
 					<div class="hs-img">
-						<img src="static/img/hero-slider/3.png" alt="">
+						<img src="{% static 'img/hero-slider/3.png' %}" alt="">
 					</div>
 				</div>
 			</div>
@@ -147,20 +149,20 @@
 <section class="about-section spad">
     <div class="container">
         <div class="section-title text-center">
-            <img src="static/img/icons/logo-icon.png" alt="">
+            <img src="{% static 'img/icons/logo-icon.png' %}" alt="">
             <h2>Welcome to Diksha's Fitness Studio</h2>
             <p>Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!</p>
         </div>
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-img">
-                    <img src="static/img/about.png" alt="">
+                    <img src="{% static 'img/about.png' %}" alt="">
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="about-item">
                     <div class="ai-icon">
-                        <img src="static/img/icons/about-1.png" alt="">
+                        <img src="{% static 'img/icons/about-1.png' %}" alt="">
                     </div>
                     <div class="ai-text">
                         <h4>Full Rejuvenation</h4>
@@ -169,7 +171,7 @@
                 </div>
                 <div class="about-item">
                     <div class="ai-icon">
-                        <img src="static/img/icons/about-2.png" alt="">
+                        <img src="{% static 'img/icons/about-2.png' %}" alt="">
                     </div>
                     <div class="ai-text">
                         <h4>Extension of Spring</h4>
@@ -178,7 +180,7 @@
                 </div>
                 <div class="about-item">
                     <div class="ai-icon">
-                        <img src="static/img/icons/about-3.png" alt="">
+                        <img src="{% static 'img/icons/about-3.png' %}" alt="">
                     </div>
                     <div class="ai-text">
                         <h4>Against Aging</h4>
