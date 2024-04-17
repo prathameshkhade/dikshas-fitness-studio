@@ -1,4 +1,6 @@
-{% include "header.html" %}
+{% extends "base.html" %}
+
+{% block content %}
 
 <!-- Infor Model -->
 <div class="infor-model-warp">
@@ -8,13 +10,13 @@
         </div>
         <div class="infor-middle">
             <a href="#" class="infor-logo">
-                <img src="img/logo-2.png" alt="">
+                <img src="static/img/logo-2.png" alt="">
             </a>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
             <div class="insta-imgs">
                 <div class="insta-item">
                     <div class="insta-img">
-                        <img src="img/infor/1.jpg" alt="">
+                        <img src="static/img/infor/1.jpg" alt="">
                         <div class="insta-hover">
                             <i class="fa fa-instagram"></i>
                             <p>ahana.yoga</p>
@@ -23,7 +25,7 @@
                 </div>
                 <div class="insta-item">
                     <div class="insta-img">
-                        <img src="img/infor/2.jpg" alt="">
+                        <img src="static/img/infor/2.jpg" alt="">
                         <div class="insta-hover">
                             <i class="fa fa-instagram"></i>
                             <p>ahana.yoga</p>
@@ -32,7 +34,7 @@
                 </div>
                 <div class="insta-item">
                     <div class="insta-img">
-                        <img src="img/infor/3.jpg" alt="">
+                        <img src="static/img/infor/3.jpg" alt="">
                         <div class="insta-hover">
                             <i class="fa fa-instagram"></i>
                             <p>ahana.yoga</p>
@@ -41,7 +43,7 @@
                 </div>
                 <div class="insta-item">
                     <div class="insta-img">
-                        <img src="img/infor/4.jpg" alt="">
+                        <img src="static/img/infor/4.jpg" alt="">
                         <div class="insta-hover">
                             <i class="fa fa-instagram"></i>
                             <p>ahana.yoga</p>
@@ -50,7 +52,7 @@
                 </div>
                 <div class="insta-item">
                     <div class="insta-img">
-                        <img src="img/infor/5.jpg" alt="">
+                        <img src="static/img/infor/5.jpg" alt="">
                         <div class="insta-hover">
                             <i class="fa fa-instagram"></i>
                             <p>ahana.yoga</p>
@@ -59,7 +61,7 @@
                 </div>
                 <div class="insta-item">
                     <div class="insta-img">
-                        <img src="img/infor/6.jpg" alt="">
+                        <img src="static/img/infor/6.jpg" alt="">
                         <div class="insta-hover">
                             <i class="fa fa-instagram"></i>
                             <p>ahana.yoga</p>
@@ -69,7 +71,7 @@
             </div>
             <form class="infor-form">
                 <input type="text" placeholder="Your Email">
-                <button><img src="img/icons/send.png" alt=""></button>
+                <button><img src="static/img/icons/send.png" alt=""></button>
             </form>
             <div class="insta-social">
                 <a href="#"><i class="fa fa-linkedin"></i></a>
@@ -155,4 +157,4 @@
 </section>
 <!-- Trainers Section end -->
 
-{% include "footer.html" %}
+{% endblock content %}
