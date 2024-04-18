@@ -126,10 +126,18 @@
                 <h3>{{paragraph_title}}</h3>
                 <p>{{paragraph_description}}</p>
                 <ul>
-                    <li><i class="material-icons">check_circle</i>Gold Medal for International Yoga Championship 2012.</li>
+                    {% comment %} <li><i class="material-icons">check_circle</i>Gold Medal for International Yoga Championship 2012.</li>
                     <li><i class="material-icons">check_circle</i>Silver Medal of All High Schools Championship and Indian Yoga Club in 2010.</li>
                     <li><i class="material-icons">check_circle</i>Gold Medal for Jharkhand State Yoga Championship in 2007.</li>
-                    <li><i class="material-icons">check_circle</i>Gold Medal for East India Yoga Championship in 2005.</li>
+                    <li><i class="material-icons">check_circle</i>Gold Medal for East India Yoga Championship in 2005.</li> {% endcomment %}
+
+                    {% for title in archivements %}
+                    <li>
+                        <i class="material-icons">check_circle</i>
+                        {{ title }}
+                    </li>
+                    {% endfor %}
+
                 </ul>
             </div>
         </div>
