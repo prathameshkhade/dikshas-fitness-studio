@@ -15,6 +15,8 @@ class Archivements(models.Model):
         archivements = models.CharField(("awards and archivements"), max_length=120)
 
 class Hyperlinks(models.Model):
-    facebook = models.CharField(("facebook link"), max_length=200)
+    facebook = models.CharField(("facebook link"), max_length=200, null=True, default=None)
     instagram = models.CharField(("instagram link"), max_length=200)
     youtube = models.CharField(("youtube link"), max_length=1024)
+    twiter = models.CharField(("twiter link"), max_length=1024)
+    linkdin = models.CharField(("linkdin link"), max_length=50, null=True)
