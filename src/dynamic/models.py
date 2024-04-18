@@ -11,8 +11,8 @@ class AboutPage(models.Model):
     paragraph_title  = models.CharField(max_length=50, default="Enter title here...")
     paragraph_description = models.TextField(default="Describe about your title mentioned above...")
 
-    class Archivements:
-        archivements = models.CharField(max_length=120)
+class Archivements(models.Model):
+        archivements = models.CharField(("awards and archivements"), max_length=120)
 
 class Hyperlinks(models.Model):
     facebook = models.CharField(("facebook link"), max_length=200)
