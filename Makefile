@@ -26,11 +26,11 @@ test:
 	poetry run python -m src.manage test
 
 # target migrations - for saving migrations
-migrations:
+migrations: 
 	poetry run python -m src.manage makemigrations
 
 # target migrate - for applying migrations
-migrate:
+migrate: migrations
 	poetry run python -m src.manage migrate
 
 # target run - for running the development server on 8000 port

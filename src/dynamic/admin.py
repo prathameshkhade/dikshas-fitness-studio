@@ -3,13 +3,14 @@ from .models import AboutPage
 
 class Service(admin.ModelAdmin):
     list_display= (
+        # 'image',
         'name',
         'title',
         'experience',
         'email',
         'bio',
-        'para_title',
-        'description'
+        'paragraph_title',
+        'paragraph_description'
     )
 
 # Register your models here.
