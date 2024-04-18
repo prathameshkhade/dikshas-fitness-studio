@@ -22,8 +22,4 @@ def about_view(request):
         'paragraph_description': table_data.paragraph_description
     }
 
-    print("-"*30)
-    print(data)
-    print("-"*30)
-
     return render(request, "about.html", data)
