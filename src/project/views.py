@@ -31,3 +31,7 @@ def about_view(request):
     data['hyperlinks'] = Hyperlinks().getdata()
 
     return render(request, "about.html", data)
+
+
+def classes_view(request):  
+    return render(request, "classes.html")
