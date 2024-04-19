@@ -16,13 +16,15 @@ class ClassInfo(models.Model):
             table_data = ClassInfo.objects.all()
 
             data = {}
+            i = 1
             for obj in table_data:
-                data[obj] = {
+                data[i] = {
                     'title': obj.class_title,
                     'week': obj.class_week,
                     'time': obj.class_time,
                     'description': obj.class_description
                 }
+                i += 1
 
         except Exception as e:
             print(e)

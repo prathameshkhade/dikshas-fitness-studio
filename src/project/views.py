@@ -35,7 +35,7 @@ def about_view(request):
 
 
 def classes_view(request): 
-    table_data = ClassInfo()
-    print(table_data.getdata())
+    data = { 'data': ClassInfo().getdata() }
+    print(data)
 
-    return render(request, "classes.html")
+    return render(request, "classes.html", data)
