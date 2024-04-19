@@ -105,10 +105,11 @@
                 <div class="td-left">
                     <img src="{% static 'img/classes/1.jpg' %}" alt="">
                     <div class="td-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-youtube"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
+
+                        {% for title, link in hyperlinks.items %}
+                            <a href="{{ link }}"" target="blank"><i class="fa fa-{{ title }}"></i></a>
+                        {% endfor %}
+
                     </div>
                 </div>
                 <div class="td-right">
