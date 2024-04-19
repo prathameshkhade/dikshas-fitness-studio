@@ -1487,16 +1487,16 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	margin-top: 15px;
 	margin-bottom: 50px;
 	border-radius: 13px;
-	-webkit-box-shadow: 0px 5px 6px rgba(72, 105, 114, 0.15);
-	box-shadow: 0px 5px 6px rgba(72, 105, 114, 0.15);
+	-webkit-box-shadow: 0px 5px 6px rgba(72, 105, 114, 0.25);
+	box-shadow: 0px 5px 6px rgba(72, 105, 114, 0.25);
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
 }
 
 .classes-item:hover {
-	-webkit-box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.15);
-	box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.15);
+	-webkit-box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.55);
+	box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.55);
 }
 
 .classes-item .ci-img img {

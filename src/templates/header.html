@@ -19,17 +19,6 @@
                     <i class="material-icons">alarm_on</i>
                     <p>Mon - Fri:  6:30am - 07:45pm</p>
                 </div>
-                {% comment %} 
-                    <div class="header-info">
-                        <i class="material-icons">language</i>
-                        <select id="language" class="language-select">
-                            <option data-display="Language">EN</option>
-                            <option data-display="Language" value="1">ES</option>
-                            <option data-display="Language" value="2">JA</option>
-                            <option data-display="Language" value="2">AR</option>
-                        </select>
-                    </div> 
-                {% endcomment %}
             </div>
         </div>
     </div>
@@ -47,33 +36,20 @@
         </div>
         <div class="container">
             <ul class="main-menu">
-                <li><a href="{% url "homepage" %}" class="active">Home</a></li>
-                <li><a href="{% url "about" %}">About</a></li>
+                <li><a href="{% url "homepage" %}" class="{% if request.path == '/' %} active {% endif %}">Home</a></li>
+                <li><a href="{% url "about" %}" class="{% if request.path == '/about/' %} active {% endif %}">About</a></li>
                 <li><a href="classes.html">Classes</a>
                     <ul class="sub-menu">
                         <li><a href="classes.html">Our Claasses</a></li>
                         <li><a href="classes-details.html">Claasses Details</a></li>
                     </ul>
                 </li>
-                {% comment %} <li><a href="trainer.html">trainers</a>
-                    <ul class="sub-menu">
-                        <li><a href="trainer.html">Our Trainers</a></li>
-                        <li><a href="trainer-details.html">Trainers Details</a></li>
-                    </ul>
-                </li> {% endcomment %}
                 <li><a href="events.html">events</a>
                     <ul class="sub-menu">
                         <li><a href="events.html">Our Events</a></li>
                         <li><a href="event-details.html">Events Details</a></li>
                     </ul>
-                {% comment %} </li>
-                <li><a href="blog.html">Blog</a>
-                    <ul class="sub-menu">
-                        <li><a href="blog.html">Our Blog</a></li>
-                        <li><a href="single-blog.html">Blog Details</a></li>
-                    </ul>
-                </li> {% endcomment %}
-                <li><a href="{% url "contact" %}">Contact</a></li>
+                <li><a href="{% url "contact" %}" class="{% if request.path == '/contact/' %} active {% endif %}">Contact</a></li>
             </ul>
         </div>
     </div>
