@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # own
     'src.dynamic',
     'src.classes',
+    'src.User_Management',
 ]
 
 MIDDLEWARE = [
