@@ -22,7 +22,7 @@ Diksha's Fitness Studio is a comprehensive fitness management system designed sp
    ```bash
    cd [repository_name]
    poetry install
-`
+
 ## Documentation
 Detailed documentation, usage instructions, and API references can be found [here](link_to_documentation).
 
