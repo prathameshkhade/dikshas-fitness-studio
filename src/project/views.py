@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from src.dynamic.models import AboutPage, Archivements, Hyperlinks
+from src.classes.models import ClassInfo
 
 # Create your views here
 def homepage_view(request):  
@@ -33,5 +34,8 @@ def about_view(request):
     return render(request, "about.html", data)
 
 
-def classes_view(request):  
+def classes_view(request): 
+    table_data = ClassInfo()
+    print(table_data.getdata())
+
     return render(request, "classes.html")
