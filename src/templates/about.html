@@ -103,7 +103,7 @@
         <div class="trainer-details">
             <div class="trainer-info">
                 <div class="td-left">
-                    <img src="{% static 'img/classes/1.jpg' %}" alt="">
+                    <img src="/{{ image }}" alt="">
                     <div class="td-social">
 
                         {% for title, link in hyperlinks.items %}
@@ -113,8 +113,8 @@
                     </div>
                 </div>
                 <div class="td-right">
-                    <h3>{{name}}</h3>
-                    <h6>{{title}}</h6>
+                    <h3>{{ name }}</h3>
+                    <h6>{{ title }}</h6>
                     <ul>
                         <li><strong>Experience:</strong><p>{{experience}} years</p></li>
                         <li><strong>Email:</strong><a href="mailto:{{email}}"><p>{{email}}</p></a></li>

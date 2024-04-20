@@ -3,7 +3,7 @@ from .models import AboutPage, Hyperlinks, Archivements
 
 class Service(admin.ModelAdmin):
     list_display= (
-        # 'image',
+        'img',
         'name',
         'title',
         'experience',

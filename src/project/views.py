@@ -14,6 +14,7 @@ def about_view(request):
     table_data = AboutPage.objects.get(id=1)
 
     data = {
+        'image': table_data.img,
         'name': table_data.name,
         'title': table_data.title,
         'experience': table_data.experience,
@@ -35,7 +36,7 @@ def about_view(request):
 
 
 def classes_view(request): 
-    tdata = (ClassInfo().getdata())
+    tdata = ClassInfo().getdata()
     data = { 'data': tdata }
     print(data)
 

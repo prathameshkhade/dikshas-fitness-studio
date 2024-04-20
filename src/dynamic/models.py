@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class AboutPage(models.Model):
-    # image = models.ImageField(upload_to="statc/", height_field=None, width_field=None, max_length=None)
+    img = models.ImageField(("image"), upload_to="src/media/about/", default="static/img/classes/1.jpg", max_length=150)
     name = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     experience = models.IntegerField()
