@@ -1,0 +1,2 @@
+change content on home.html
+chane img aspect-ration option in gallary section in footer.html
