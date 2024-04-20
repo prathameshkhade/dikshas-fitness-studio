@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class ClassInfo(models.Model):
-    # class_img = models.ImageField((""), upload_to=None, height_field=None, width_field=None, max_length=None)
+    class_img = models.ImageField(("image"), upload_to="src/media/classes/", max_length=150, default="static/img/classes/3.jpg")
     class_title = models.CharField(("class title"), max_length=50) 
     class_week = models.CharField(("enter week"), max_length=50) 
     class_time = models.CharField(("enter time"), max_length=50) 
@@ -19,6 +19,7 @@ class ClassInfo(models.Model):
             i = 1
             for obj in table_data:
                 data[i] = {
+                    'img': obj.class_img,
                     'title': obj.class_title,
                     'week': obj.class_week,
                     'time': obj.class_time,

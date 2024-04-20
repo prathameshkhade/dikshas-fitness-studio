@@ -134,4 +134,5 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # my own settings
-
+MEADIA_URL = '/meadia/'
+MEADIA_ROOT = os.path.join(BASE_DIR, 'src/media')

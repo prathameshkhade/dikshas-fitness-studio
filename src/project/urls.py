@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 # Custom imports
 from .views import homepage_view, contact_view, about_view, classes_view
 
@@ -27,4 +30,4 @@ urlpatterns = [
     path('about/', about_view, name="about"),
     path('classes/', classes_view, name="classes"),
 
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
