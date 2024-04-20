@@ -22,23 +22,25 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="row">
-                    <div class="col-md-6"> {% for key, value in data.items %}
-                        <div class="classes-item-warp">
-                            <div class="classes-item">
-                                <div class="ci-img">
-                                    <img src="{% static 'img/classes/3.jpg' %}" alt="">
-                                </div>
-                                <div class="ci-text">
-					<h4>{{ key.title }}</h4>
-                                    <div class="ci-metas">
-					    <div class="ci-meta"><i class="material-icons">event_available</i>{{ value.week }}</div>
-					    <div class="ci-meta"><i class="material-icons">alarm_on</i>{{ value.time }}</div>
+                    {% for key, value in data.items %}
+                        <div class="col-md-6"> 
+                            <div class="classes-item-warp">
+                                <div class="classes-item">
+                                    <div class="ci-img">
+                                        <img src="{% static 'img/classes/3.jpg' %}" alt="">
                                     </div>
-				    <p>{{ value.description }}</p>
-                                </div>
-                            </div> 
-			</div>  {% endfor %}
-                    </div>
+                                    <div class="ci-text">
+                                        <h4>{{ key.title }}</h4>
+                                        <div class="ci-metas">
+                                            <div class="ci-meta"><i class="material-icons">event_available</i>{{ value.week }}</div>
+                                            <div class="ci-meta"><i class="material-icons">alarm_on</i>{{ value.time }}</div>
+                                        </div>
+                                        <p>{{ value.description }}</p>
+                                    </div>
+                                </div> 
+                            </div>  
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
             {% comment %}  YOUTUBE VIDEIOS
@@ -51,11 +53,6 @@
                     </div>
                 </div> 
             {% endcomment %}
-
-            {% for key, value in data.items %}
-	    {{ value.week }} <br>
-            {% endfor %}
-
         </div>
     </div>
 </section>
