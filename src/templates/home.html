@@ -194,5 +194,34 @@
 </section>
 <!-- About Section end -->
 
+<!-- Classes Section -->
+<section class="classes-section spad">
+	<div class="container">
+		<div class="section-title text-center">
+			<img src="{% static 'img/icons/logo-icon.png' %}" alt="">
+			<h2>Popular Classes</h2>
+			<p>Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!</p>
+		</div>
+		<div class="classes-slider owl-carousel">
+			{% for key, value in data.items %}
+				<div class="classes-item">
+					<div class="ci-img">
+						<img src="/{{ value.img }}" alt="">
+					</div>
+					<div class="ci-text">
+						<h4><a href="classes-details.html">{{ value.title }}</a></h4>
+						<div class="ci-metas">
+							<div class="ci-meta"><i class="material-icons">event_available</i>{{ value.week }}</div>
+							<div class="ci-meta"><i class="material-icons">alarm_on</i>{{ value.time }}</div>
+						</div>
+						<p>{{ value.description }}</p>
+					</div>
+				</div>
+			{% endfor%}
+		</div>
+	</div>
+</section>
+<!-- Classes Section end -->
+
 {% endblock content %}
 

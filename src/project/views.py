@@ -4,8 +4,12 @@ from src.dynamic.models import AboutPage, Archivements, Hyperlinks
 from src.classes.models import ClassInfo
 
 # Create your views here
-def homepage_view(request):  
-    return render(request, "home.html")
+def homepage_view(request): 
+    tdata = ClassInfo().getdata()
+    data = { 'data': tdata }
+    print(data) 
+
+    return render(request, "home.html", data)
 
 def contact_view(request):  
     return render(request, "contact.html")
