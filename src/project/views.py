@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-from src.dynamic.models import AboutPage, Archivements, Hyperlinks
+from src.dynamic.models import AboutPage, Archivements, Hyperlinks, InquiryDetails
 from src.classes.models import ClassInfo
 
 # Create your views here
@@ -45,3 +46,20 @@ def classes_view(request):
     print(data)
 
     return render(request, "classes.html", data)
+
+def save(request):
+    msg = "Data could'nt be save"
+
+    if request.method=="POST":
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
+        email = request.POST.get('email')
+        mob = request.POST.get('mob')
+        desc = request.POST.get('desc')
+
+        obj = InquiryDetails(fname=fname, lname=lname, email=email, mobile=mob, description=desc)
+        obj.save()
+
+        msg="saved"
+
+    return  HttpResponse(msg)

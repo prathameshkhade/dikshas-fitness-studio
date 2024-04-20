@@ -30,3 +30,10 @@ class Hyperlinks(models.Model):
 
         else:
              return data
+        
+class InquiryDetails(models.Model):
+     fname = models.CharField(("fname"), max_length=50)
+     lname = models.CharField(("lname"), max_length=50)
+     email = models.EmailField(("email"), max_length=254)
+     mobile = models.BigIntegerField(("mobile"))
+     description = models.TextField(("description"))

@@ -135,23 +135,23 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                <form class="singup-form contact-form">
+                <form action="/save/" method="post" class="singup-form contact-form"> {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" placeholder="First Name">
+                            <input type="text" name="fname" placeholder="First Name" Required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" placeholder="Last Name">
+                            <input type="text" name="lname" placeholder="Last Name" Required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" placeholder="Your Email">
+                            <input type="email" name="email" placeholder="Your Email" Required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" placeholder="Phone Number">
+                            <input type="number" name="mob" placeholder="Phone Number" Required>
                         </div>
                         <div class="col-md-12">
-                            <textarea placeholder="Message"></textarea>
-                            <a href="#" class="site-btn sb-gradient">Send message</a>
+                            <textarea name="desc" placeholder="Message" Required></textarea>
+                            <button type="submit" class="site-btn sb-gradient">Send message</button>
                         </div>
                     </div>
                 </form>

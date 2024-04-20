@@ -21,7 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 # Custom imports
-from .views import homepage_view, contact_view, about_view, classes_view
+from .views import homepage_view, contact_view, about_view, classes_view, save
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,5 +29,6 @@ urlpatterns = [
     path('contact/', contact_view, name="contact"),
     path('about/', about_view, name="about"),
     path('classes/', classes_view, name="classes"),
+    path('save/', save, name="save"),
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
