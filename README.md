@@ -2,7 +2,6 @@
 
 <div style="text-align: center">
   <img src="/src/static/img/logo.png" alt="Diksha's Fitness Studio Logo" width="200"/>
-  <h1>Diksha's Fitness Studio</h1>
 </div>
 
 ## About
