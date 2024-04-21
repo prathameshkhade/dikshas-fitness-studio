@@ -34,12 +34,15 @@ ALLOWED_HOSTS = []
 # Application definition
 APP_DIR = os.path.join(BASE_DIR, 'src')
 INSTALLED_APPS = [
+    'jazzmin',  # admin panel
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 3rd party
 
     # own
     'src.dynamic',

@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3.11"
 django = "^5.0.4"
 pillow = "^10.3.0"
+django-jazzmin = "^3.0.0"
 
 
 [build-system]
