@@ -135,23 +135,23 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                <form action="{% url "save" %}" id="saveform" method="post" class="singup-form contact-form"> {% csrf_token %}
+                <form id="saveform" method="post" class="singup-form contact-form"> {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" name="fname" id="fname" placeholder="First Name" Required>
+                            <input type="text" name="fname" id="fname" placeholder="First Name">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="lname" id="lname" placeholder="Last Name" Required>
+                            <input type="text" name="lname" id="lname" placeholder="Last Name">
                         </div>
                         <div class="col-md-6">
-                            <input type="email" name="email" id="email" placeholder="Your Email" Required>
+                            <input type="email" name="email" id="email" placeholder="Your Email">
                         </div>
                         <div class="col-md-6">
-                            <input type="number" name="mob" id="mob" placeholder="Phone Number" Required>
+                            <input type="number" name="mob" id="mob" placeholder="Phone Number">
                         </div>
                         <div class="col-md-12">
-                            <textarea name="desc" id="desc" placeholder="Message" Required></textarea>
-                            <button type="submit" class="site-btn sb-gradient">Send message</button>
+                            <textarea name="desc" id="desc" placeholder="Message"></textarea>
+                            <button type="button" class="site-btn sb-gradient" onclick="savedata()">Send message</button>
                         </div>
                     </div>
                 </form>
@@ -168,7 +168,7 @@
             <div class="modal-header">
                 <h5 class="modal-title">Success</h5>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" class="rounded-9">
                 Data saved successfully.
             </div>
             <div class="modal-footer">
@@ -197,13 +197,36 @@
 
 <script>
 
-    document.getElementById("checkButton").addEventListener("click", () => {
-        {% if success %}
-            alert("ok")
-        {% else %}
-            alert("not ok")
-        {% endif %} 
-    })
+    async function savedata() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var mob = document.getElementById("mob").value;
+        var desc = document.getElementById("desc").value;
+
+        var data = {
+            "fname": fname,
+            "lname": lname,
+            "email": email,
+            "mob": mob,
+            "desc": desc
+        };
+
+        var response = await fetch('/contact/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.status == 200) {
+            $('#successModal').modal('show');
+        } else {
+            $('#failureModal').modal('show');
+        }
+    }
         
 </script>
 
