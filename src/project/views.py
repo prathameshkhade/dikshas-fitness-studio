@@ -8,7 +8,6 @@ from src.classes.models import ClassInfo
 def homepage_view(request): 
     tdata = ClassInfo().getdata()
     data = { 'data': tdata }
-    print(data) 
 
     return render(request, "home.html", data)
 
@@ -48,7 +47,7 @@ def classes_view(request):
     return render(request, "classes.html", data)
 
 def save(request):
-    msg = "Data could'nt be save"
+    saved = False
 
     if request.method=="POST":
         fname = request.POST.get('fname')
@@ -60,6 +59,6 @@ def save(request):
         obj = InquiryDetails(fname=fname, lname=lname, email=email, mobile=mob, description=desc)
         obj.save()
 
-        msg="saved"
+        saved = True
 
-    return  HttpResponse(msg)
+    return  HttpResponse({'saved': saved})

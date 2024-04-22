@@ -135,7 +135,7 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                <form action="/save/" method="post" class="singup-form contact-form"> {% csrf_token %}
+                <form action="{% url "save" %}" method="post" class="singup-form contact-form"> {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6">
                             <input type="text" name="fname" placeholder="First Name" Required>

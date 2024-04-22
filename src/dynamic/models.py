@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class AboutPage(models.Model):
-    img = models.ImageField(("image"), upload_to="src/media/about/", default="static/img/classes/1.jpg", max_length=150)
     name = models.CharField(max_length=50)
+    img = models.ImageField(("image"), upload_to="src/media/about/", default="static/img/classes/1.jpg", max_length=150)
     title = models.CharField(max_length=50)
     experience = models.IntegerField()
     email = models.EmailField(max_length=254)
