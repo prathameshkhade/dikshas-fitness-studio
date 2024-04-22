@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import JsonResponse
 
 from src.dynamic.models import AboutPage, Archivements, Hyperlinks, InquiryDetails
 from src.classes.models import ClassInfo
@@ -60,5 +60,6 @@ def save(request):
         obj.save()
 
         saved = True
+        print(fname, lname, email, mob, desc)
 
-    return  HttpResponse({'saved': saved})
+    return  JsonResponse({'success': saved})

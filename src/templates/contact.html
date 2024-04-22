@@ -135,22 +135,22 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                <form action="{% url "save" %}" method="post" class="singup-form contact-form"> {% csrf_token %}
+                <form action="{% url "save" %}" id="saveform" method="post" class="singup-form contact-form"> {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" name="fname" placeholder="First Name" Required>
+                            <input type="text" name="fname" id="fname" placeholder="First Name" Required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="lname" placeholder="Last Name" Required>
+                            <input type="text" name="lname" id="lname" placeholder="Last Name" Required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" name="email" placeholder="Your Email" Required>
+                            <input type="email" name="email" id="email" placeholder="Your Email" Required>
                         </div>
                         <div class="col-md-6">
-                            <input type="number" name="mob" placeholder="Phone Number" Required>
+                            <input type="number" name="mob" id="mob" placeholder="Phone Number" Required>
                         </div>
                         <div class="col-md-12">
-                            <textarea name="desc" placeholder="Message" Required></textarea>
+                            <textarea name="desc" id="desc" placeholder="Message" Required></textarea>
                             <button type="submit" class="site-btn sb-gradient">Send message</button>
                         </div>
                     </div>
@@ -160,5 +160,52 @@
     </div>
 </section>
 <!-- Trainers Section end -->
+
+<!-- Success Modal -->
+<div id="successModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Success</h5>
+            </div>
+            <div class="modal-body">
+                Data saved successfully.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Failure Modal -->
+<div id="failureModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Error</h5>
+            </div>
+            <div class="modal-body">
+                Failed to save the data.
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="sendMsg" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    document.getElementById("checkButton").addEventListener("click", () => {
+        {% if success %}
+            alert("ok")
+        {% else %}
+            alert("not ok")
+        {% endif %} 
+    })
+        
+</script>
+
 
 {% endblock content %}
