@@ -14,9 +14,15 @@ class AboutPage(models.Model):
 class Archivements(models.Model):
         archivements = models.CharField(("awards and archivements"), max_length=120)
 
+        def __str__(self) -> str:
+             return self.archivements.capitalize()
+
 class Hyperlinks(models.Model):
     title = models.CharField(("Title for hyperlink"), max_length=50)
     link = models.URLField(("Hyperlink"), max_length=200)
+
+    def __str__(self) -> str:
+         return f"{self.title}"
 
     def getdata(self) -> dict:
         try:
@@ -37,3 +43,6 @@ class InquiryDetails(models.Model):
      email = models.EmailField(("email"), max_length=254)
      mobile = models.BigIntegerField(("mobile"))
      description = models.TextField(("description"))
+
+     def __str__(self) -> str:
+          return f"{self.fname.capitalize()} {self.lname.capitalize()}"

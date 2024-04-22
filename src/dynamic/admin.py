@@ -3,8 +3,8 @@ from .models import AboutPage, Hyperlinks, Archivements, InquiryDetails
 
 class Service(admin.ModelAdmin):
     list_display= (
-        'img',
         'name',
+        'img',
         'title',
         'experience',
         'email',
