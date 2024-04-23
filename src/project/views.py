@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from src.dynamic.models import AboutPage, Archivements, Hyperlinks, InquiryDetails
+from src.dynamic.models import AboutPage, Archivements, Hyperlinks, InquiryDetails, Gallary
 from src.classes.models import ClassInfo
 
 # Create your views here
@@ -9,10 +9,19 @@ def homepage_view(request):
     tdata = ClassInfo().getdata()
     data = { 'data': tdata }
 
+    data['images'] = [
+        x.gallary_image.url for x in Gallary.objects.all()
+    ]
+    print(data)
+
     return render(request, "home.html", data)
 
 def contact_view(request):  
-    return render(request, "contact.html")
+    data = {}
+    data['images'] = [
+        x.gallary_image.url for x in Gallary.objects.all()
+    ]
+    return render(request, "contact.html", data)
 
 def about_view(request):  
     table_data = AboutPage.objects.get(id=1)
@@ -36,13 +45,21 @@ def about_view(request):
     # addinng hyperlinks in data
     data['hyperlinks'] = Hyperlinks().getdata()
 
+    # adding images to data
+    data['images'] = [
+        x.gallary_image.url for x in Gallary.objects.all()
+    ]
+
     return render(request, "about.html", data)
 
 
 def classes_view(request): 
     tdata = ClassInfo().getdata()
     data = { 'data': tdata }
-    print(data)
+
+    data['images'] = [
+        x.gallary_image.url for x in Gallary.objects.all()
+    ]
 
     return render(request, "classes.html", data)
 
