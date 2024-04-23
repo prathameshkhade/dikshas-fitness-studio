@@ -135,7 +135,7 @@
                 </div>
             </div>
             <div class="col-lg-8">
-		    <form action="{% url "save" %}" id="saveform" method="post" class="singup-form contact-form"> {% csrf_token %}
+		    <form id="saveform" action="{% url "save" %}" id="saveform" method="post" class="singup-form contact-form"> {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6">
                             <input type="text" name="fname" id="fname" placeholder="First Name" required>
@@ -196,37 +196,40 @@
 </div>
 
 <script>
+	
+    function handleSuccess(response) {
+    	if (response.success) {
+		$('#success-modal').modal('show');
+	} else {
+		$('#failureModal').modal('show');
+	}
+     }
 
-    async function savedata() {
-        var fname = document.getElementById("fname").value;
-        var lname = document.getElementById("lname").value;
-        var email = document.getElementById("email").value;
-        var mob = document.getElementById("mob").value;
-        var desc = document.getElementById("desc").value;
+$("#saveform").submit(function(event) {
+  event.preventDefault(); // Prevent default form submission
 
-        var data = {
-            "fname": fname,
-            "lname": lname,
-            "email": email,
-            "mob": mob,
-            "desc": desc
-        };
-
-	    var response = await fetch('{% url "save" %}', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': '{{ csrf_token }}'
-            },
-            body: JSON.stringify(data)
-        });
-
-        if (response.status == 200) {
-            $('#successModal').modal('show');
-        } else {
-            $('#failureModal').modal('show');
-        }
+  // Get form data
+  var formData = $(this).serialize();
+	alert(formData);
+  $.ajax({
+    type: "POST",
+    url: "{% url 'save' %}", // Replace 'save' with your actual URL name
+    data: formData,
+    dataType: "json",
+    success: function(response) {
+      if (response.success) {
+        $('#success-modal').modal('show'); // Assuming you're using Bootstrap modals
+      } else {
+	      $('#failureModal').modal('show');
+      }
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      // Handle AJAX errors (optional)
+      console.error("AJAX error: ", textStatus, errorThrown);
     }
+  });
+});
+
         
 </script>
 
