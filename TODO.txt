@@ -1,3 +1,1 @@
-change content on home.html
-chane img aspect-ration option in gallary section in footer.html  
-    CSS : {style="aspect-ratio: 3/2;  mix-blend-mode: color-burn; object-fit: contain;"}
+add only logo in admin (src/project/jazzmin.py)
