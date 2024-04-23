@@ -12,7 +12,7 @@ JAZZMIN_SETTINGS = {
     "site_brand": "Fitness Studio",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
-    # "site_logo": "../static/img/logo.png",
+    "site_logo": "../static/img/D-logo.png",
 
     # Relative path to a favicon for your site, will default to site_logo if absent (ideally 32x32 px)
     # "site_icon": None,
