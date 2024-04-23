@@ -135,23 +135,23 @@
                 </div>
             </div>
             <div class="col-lg-8">
-                <form id="saveform" method="post" class="singup-form contact-form"> {% csrf_token %}
+		    <form action="{% url "save" %}" id="saveform" method="post" class="singup-form contact-form"> {% csrf_token %}
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" name="fname" id="fname" placeholder="First Name">
+                            <input type="text" name="fname" id="fname" placeholder="First Name" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="lname" id="lname" placeholder="Last Name">
+                            <input type="text" name="lname" id="lname" placeholder="Last Name" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" name="email" id="email" placeholder="Your Email">
+				<input type="email" name="email" id="email" placeholder="Your Email" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="number" name="mob" id="mob" placeholder="Phone Number">
+                            <input type="number" name="mob" id="mob" placeholder="Phone Number" required>
                         </div>
                         <div class="col-md-12">
-                            <textarea name="desc" id="desc" placeholder="Message"></textarea>
-                            <button type="button" class="site-btn sb-gradient" onclick="savedata()">Send message</button>
+                            <textarea name="desc" id="desc" placeholder="Message" required></textarea>
+                            <button type="submit" class="site-btn sb-gradient">Send message</button>
                         </div>
                     </div>
                 </form>
@@ -212,7 +212,7 @@
             "desc": desc
         };
 
-        var response = await fetch('/contact/', {
+	    var response = await fetch('{% url "save" %}', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
