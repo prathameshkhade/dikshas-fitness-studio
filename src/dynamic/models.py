@@ -47,8 +47,8 @@ class InquiryDetails(models.Model):
      def __str__(self) -> str:
           return f"{self.fname.capitalize()} {self.lname.capitalize()}"
      
-class Gallary(models.Model):
-     gallary_image = models.ImageField(("Gallary Image"), upload_to="src/media/gallary/", max_length=100, null=False)
+class Gallery(models.Model):
+     gallery_image = models.ImageField(("Gallery Image"), upload_to="src/media/gallery/", max_length=100, null=False)
 
      def __str__(self) -> str:
-          return self.gallary_image.url
+          return self.gallery_image.url

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import AboutPage, Hyperlinks, Archivements, InquiryDetails, Gallary
+from .models import AboutPage, Hyperlinks, Archivements, InquiryDetails, Gallery
 
 class Service(admin.ModelAdmin):
     list_display= (
@@ -18,4 +18,4 @@ admin.site.register(AboutPage, Service)
 admin.site.register(InquiryDetails)
 admin.site.register(Archivements)
 admin.site.register(Hyperlinks)
-admin.site.register(Gallary)
+admin.site.register(Gallery)
