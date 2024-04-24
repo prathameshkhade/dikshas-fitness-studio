@@ -12,7 +12,6 @@ def homepage_view(request):
     data['images'] = [
         x.gallery_image.url for x in Gallery.objects.all()
     ]
-    print(data)
 
     return render(request, "home.html", data)
 
@@ -77,6 +76,5 @@ def save(request):
         obj.save()
 
         saved = True
-        print(fname, lname, email, mob, desc)
 
     return  JsonResponse({'success': saved})

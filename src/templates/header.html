@@ -34,8 +34,8 @@
         <div class="container">
             <ul class="main-menu">
                 <li><a href="{% url 'homepage' %}" class="{% if request.path == '/' %} active {% endif %}">Home</a></li>
-                <li><a href="{% url 'about' %}" class="{% if request.path == '/about/' %} active {% endif %}">About</a></li>
-                <li><a href="{% url 'classes' %}" class="{% if request.path == '/classes/' %} active {% endif %}">Classes</a>
+                <li><a href="{% url 'about' %}" class="{% if request.path == '/about' %} active {% endif %}">About</a></li>
+                <li><a href="{% url 'classes' %}" class="{% if request.path == '/classes' %} active {% endif %}">Classes</a>
                 <li><a href="{% url 'contact' %}" class="{% if request.path == '/contact/' %} active {% endif %}">Contact</a></li>
             </ul>
         </div>
