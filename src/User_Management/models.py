@@ -17,6 +17,18 @@ class User_Management(models.Model):
         'weekends': 'Weekends'
     }
 
+    Blood_Group_Options = {
+        'A+': 'A+',
+        'A-': 'A-',
+        'B+': 'B+',
+        'B-': 'B-',
+        'AB+': 'AB+',
+        'AB-': 'AB-',
+        'O+': 'O+',
+        'O-': 'O-',
+        'other': 'Other'
+    }
+
     Client_Name = models.CharField(max_length=50)
 
     Subscription_Type = models.CharField(max_length=20,
@@ -28,7 +40,7 @@ class User_Management(models.Model):
     Mobile_No = models.CharField(max_length=10)
     Address = models.CharField(max_length=200)
     Batch_Time = models.CharField(max_length=20, choices=Batch_Time_Options)
-    Blood_Group = models.CharField(max_length=10)
+    Blood_Group = models.CharField(max_length=10, choices=Blood_Group_Options)
     Weight = models.FloatField()
     Height = models.FloatField()
     Medical_Issue = models.CharField(max_length=100)
