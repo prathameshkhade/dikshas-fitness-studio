@@ -1,1 +1,20 @@
-add only logo in admin (src/project/jazzmin.py)
+DONE : add only logo in admin (src/project/jazzmin.py)
+
+@Prathamesh:/fix (status:pending)
+    Not Found: /static/img/classes/3.jpg
+    Not Found: /static/img/classes/3.jpg
+    Not Found: /favicon.ico
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
+    Not Found: /static/img/D-logo.png
