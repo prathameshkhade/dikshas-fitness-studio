@@ -7,12 +7,11 @@ WORKDIR /app
 COPY . /app
 
 # Install system dependencies including 'make'
-RUN apk update && apk add --no-cache gcc libc-dev make
 
 RUN python -m pip install --upgrade pip
 RUN pip install poetry
 RUN poetry install --no-root
 
-EXPOSE 8000
+EXPOSE 80
 
-CMD make migrate && make run
+CMD poetry run python -m src.manage collectstatic --noinput && poetry run gunicorn -b 0.0.0.0:80 src.project.wsgi
