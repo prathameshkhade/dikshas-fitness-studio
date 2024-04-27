@@ -1,0 +1,1 @@
+web: gunicorn src.project.wsig:application --bind 0.0.0.0:80
