@@ -81,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'src.project.wsgi.application'
+WSGI_APPLICATION = 'src.project.wsgi.app'
 
 
 # Database
@@ -90,10 +90,10 @@ WSGI_APPLICATION = 'src.project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dikshafitness',
-        'USER': 'prathamesh',
-        'PASSWORD': 'prathamesh',
-        'HOST': 'localhost',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': '1AwrqsyHENo2',
+        'HOST': 'ep-winter-art-a4xn18st-pooler.us-east-1.aws.neon.tech',
         'PORT': '5432',
     }
 }
@@ -133,11 +133,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/staticfiles/'
+STATIC_URL = '/staticfiles/static'
 STATICFILES_DIRS = [
     BASE_DIR / "src/static",
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
