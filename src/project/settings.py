@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-2ew(ylg$s=v#ti4f-w1l@_7kb6=+xjvwiz^$kj=m3mj99w^h&_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"] 
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"] 
 
 
 # Application definition
@@ -89,8 +89,12 @@ WSGI_APPLICATION = 'src.project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'src/db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dikshafitness',
+        'USER': 'prathamesh',
+        'PASSWORD': 'prathamesh',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -129,7 +133,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'staticfiles/'
+STATIC_URL = '/staticfiles/'
 STATICFILES_DIRS = [
     BASE_DIR / "src/static",
 ]
@@ -141,5 +145,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # my own settings
-MEADIA_URL = '/meadia/'
+MEADIA_URL = '/media/'
 MEADIA_ROOT = os.path.join(BASE_DIR, 'src/media')
