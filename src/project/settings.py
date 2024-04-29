@@ -90,10 +90,10 @@ WSGI_APPLICATION = 'src.project.wsgi.app'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dikshafitness',
-        'USER': 'prathamesh',
-        'PASSWORD': 'prathamesh',
-        'HOST': 'localhost',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': '1AwrqsyHENo2',
+        'HOST': 'ep-winter-art-a4xn18st-pooler.us-east-1.aws.neon.tech',
         'PORT': '5432',
     }
 }
