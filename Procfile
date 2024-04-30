@@ -1,1 +1,0 @@
-web: gunicorn src.project.wsig --log-file -
