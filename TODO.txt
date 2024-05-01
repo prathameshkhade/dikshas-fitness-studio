@@ -1,6 +1,5 @@
-DONE : add only logo in admin (src/project/jazzmin.py)
+issue : 
 
-@Prathamesh:/fix (status:pending)
-    Not Found: /static/img/classes/3.jpg
-    Not Found: /static/img/classes/3.jpg
-    Not Found: /favicon.ico
+[ https://dikshafitness.vercel.app/admin ] is not redirecting to [ https://dikshafitness.vercel.app/admin/ ]
+I have made changes in commit : 3594e6a.
+But no change has reflected.
