@@ -1,5 +1,3 @@
- # Diksha's Fitness Studio
-
 <div style="text-align: center">
   <img src="/src/static/img/logo.png" alt="Diksha's Fitness Studio Logo" width="200"/>
 </div>
@@ -16,17 +14,21 @@ Diksha's Fitness Studio is a comprehensive fitness management system designed sp
 - Reporting and analytics
 
 ## Installation
-1. Clone this repository using git: `git clone [repository_link]`
-2. Install the required dependencies:
-   ```bash
-   cd [repository_name]
-   poetry install
 
-## Documentation
-Detailed documentation, usage instructions, and API references can be found [here](link_to_documentation).
+Please refer to the `INSTALLATION.md` file for detailed installation instructions.
+
+## Security
+
+We take the security of our system seriously. If you find any security vulnerabilities, please refer to our `SECURITY.md` file for information on how to report them.
+
+## Dependencies
+
+Our project depends on several Python packages. The dependencies and their versions are listed in the `pyproject.toml` file.
 
 ## Contributing
-Contributions are welcome! Please read our [contributing guidelines](link_to_contributing_guidelines) before submitting a pull request.
+
+We welcome contributions from the community. Please read our `CONTRIBUTING.md` file for guidelines on how to contribute to our project.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/prathameshkhade/dikshas-fitness-studio?tab=MIT-1-ov-file) file for details.
+
+This project is licensed under the terms of the MIT license. See the `LICENSE` file for the full license text.
