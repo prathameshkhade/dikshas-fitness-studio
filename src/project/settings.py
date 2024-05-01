@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-2ew(ylg$s=v#ti4f-w1l@_7kb6=+xjvwiz^$kj=m3mj99w^h&_
 DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"] 
-
+#ALLOWED_HOSTS = ["*"]
 
 # Application definition
 APP_DIR = os.path.join(BASE_DIR, 'src')

@@ -22,9 +22,11 @@ from django.conf.urls.static import static
 
 # Custom imports
 from .views import homepage_view, contact_view, about_view, classes_view, save
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('admin', RedirectView.as_view(url='/admin/') ),
     path('', homepage_view, name="homepage"),
     path('contact/', contact_view, name="contact"),
     path('about', about_view, name="about"),
