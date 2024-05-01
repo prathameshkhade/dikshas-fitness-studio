@@ -15,11 +15,11 @@ Diksha's Fitness Studio is a comprehensive fitness management system designed sp
 
 ## Installation
 
-Please refer to the `INSTALLATION.md` file for detailed installation instructions.
+Please refer to the [INSTALLATION.md](./INSTALLATION.md) file for detailed installation instructions.
 
 ## Security
 
-We take the security of our system seriously. If you find any security vulnerabilities, please refer to our `SECURITY.md` file for information on how to report them.
+We take the security of our system seriously. If you find any security vulnerabilities, please refer to our [.github/SECURITY.md](./.github/SECURITY.md) file for information on how to report them.
 
 ## Dependencies
 
@@ -27,8 +27,8 @@ Our project depends on several Python packages. The dependencies and their versi
 
 ## Contributing
 
-We welcome contributions from the community. Please read our `CONTRIBUTING.md` file for guidelines on how to contribute to our project.
+We welcome contributions from the community. Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) file for guidelines on how to contribute to our project.
 
 ## License
 
-This project is licensed under the terms of the MIT license. See the `LICENSE` file for the full license text.
+This project is licensed under the terms of the MIT license. See the [LICENSE](./LICENSE) file for the full license text.
