@@ -1,11 +1,13 @@
-<div style="text-align: center">
-  <img src="/src/static/img/logo.png" alt="Diksha's Fitness Studio Logo" width="200"/>
-</div>
+# Diksha's Fitness Studio
+
+![Diksha's Fitness Studio Logo](/src/static/img/logo.png)
 
 ## About
+
 Diksha's Fitness Studio is a comprehensive fitness management system designed specifically for Diksha's Fitness Studio, a premier fitness center focusing on holistic health and wellness. The system aims to streamline operations, manage memberships, schedule classes, and provide a user-friendly experience for both staff and members.
 
 ## Features
+
 - Member profile management
 - Membership plans and billing
 - Class scheduling and booking
