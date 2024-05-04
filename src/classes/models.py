@@ -49,5 +49,5 @@ class ClassInfo(models.Model):
             return data
     
     def __del__(self):
-        blob.delete(self.class_img)
+        blob.delete(url=self.class_img)
 

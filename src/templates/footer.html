@@ -5,7 +5,9 @@
     <div class="gallery-slider owl-carousel">
         {% for image in images %}
             <div class="gs-item">
-                <img src="{% if image %}{{ image }}{% endif %}">
+                {% if image %}
+                    <img src="{{ image }}">
+                {% endif %}
                 <div class="gs-hover">
                     <i class="fa fa-instagram"></i>
                     <p>diksha_fitness_studio</p>
