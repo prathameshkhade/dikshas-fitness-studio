@@ -48,4 +48,6 @@ class ClassInfo(models.Model):
         else:
             return data
     
+    def __del__(self):
+        blob.delete(self.class_img)
 
