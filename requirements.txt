@@ -7,3 +7,5 @@ pillow==10.3.0
 sqlparse==0.5.0
 psycopg2-binary
 vercel_storage
+requests==2.18.4 
+urllib3==1.26.1
