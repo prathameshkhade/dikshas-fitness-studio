@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class ClassInfo(models.Model):
-    class_img = models.ImageField(("image"), upload_to="src/media/classes/", max_length=150, default="static/img/classes/3.jpg")
+    class_img = models.ImageField(("image"), upload_to="tmp/media/classes/", max_length=150, default="static/img/classes/3.jpg")
     class_title = models.CharField(("class title"), max_length=50) 
     class_week = models.CharField(("enter week"), max_length=50) 
     class_time = models.CharField(("enter time"), max_length=50) 
