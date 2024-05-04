@@ -14,6 +14,7 @@ django-jazzmin = "^3.0.0"
 gunicorn = "^22.0.0"
 psycopg2 = "^2.9.9"
 psycopg2-binary = "^2.9.9"
+vercel-storage = "^0.0.1"
 
 
 [build-system]

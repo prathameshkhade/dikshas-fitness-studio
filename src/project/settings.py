@@ -145,5 +145,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # my own settings
-MEADIA_URL = 'https://dikshafitness.vercel.app/tmp/'
-MEADIA_ROOT = None
+MEADIA_URL = NotImplemented
+MEADIA_ROOT = NotImplemented
