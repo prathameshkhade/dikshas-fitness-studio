@@ -4,22 +4,23 @@ from django.http import JsonResponse
 from src.dynamic.models import AboutPage, Archivements, Hyperlinks, InquiryDetails, Gallery
 from src.classes.models import ClassInfo
 
+# Fetcg all the gallery images
+gallery_images  = Gallery.objects.all().values_list('gallery_image', flat=True).distinct()
+
 # Create your views here
 def homepage_view(request): 
     tdata = ClassInfo().getdata()
     data = { 'data': tdata }
 
-    data['images'] = [
-        x.gallery_image.url for x in Gallery.objects.all()
-    ]
+    data['images'] = gallery_images
 
     return render(request, "home.html", data)
 
 def contact_view(request):  
     data = {}
-    data['images'] = [
-        x.gallery_image.url for x in Gallery.objects.all()
-    ]
+    
+    data['images'] = gallery_images
+
     return render(request, "contact.html", data)
 
 def about_view(request):  
@@ -45,9 +46,7 @@ def about_view(request):
     data['hyperlinks'] = Hyperlinks().getdata()
 
     # adding images to data
-    data['images'] = [
-        x.gallery_image.url for x in Gallery.objects.all()
-    ]
+    data['images'] = gallery_images
 
     return render(request, "about.html", data)
 
@@ -56,9 +55,7 @@ def classes_view(request):
     tdata = ClassInfo().getdata()
     data = { 'data': tdata }
 
-    data['images'] = [
-        x.gallery_image.url for x in Gallery.objects.all()
-    ]
+    data['images'] = gallery_images
 
     return render(request, "classes.html", data)
 
