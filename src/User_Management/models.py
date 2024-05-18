@@ -3,31 +3,31 @@ from datetime import timedelta
 
 # Create your models here.
 class User_Management(models.Model):
-    Subscription_Option = {
-        'kids':'Kids',
-        'adult':'Adult',
-        'personal_training':'Personal Training',
-        'other':'Other'
-    }
+    Subscription_Option = [
+        ('kids', 'Kids'),
+        ('adult', 'Adult'),
+        ('personal_training', 'Personal Training'),
+        ('other', 'Other')
+    ]
 
-    Batch_Time_Options = {
-        'morning': 'Morning',
-        'afternoon': 'Afternoon',
-        'evening': 'Evening',
-        'weekends': 'Weekends'
-    }
+    Batch_Time_Options = [
+        ('morning', 'Morning'),
+        ('afternoon', 'Afternoon'),
+        ('evening', 'Evening'),
+        ('weekends', 'Weekends')
+    ]
 
-    Blood_Group_Options = {
-        'A+': 'A+',
-        'A-': 'A-',
-        'B+': 'B+',
-        'B-': 'B-',
-        'AB+': 'AB+',
-        'AB-': 'AB-',
-        'O+': 'O+',
-        'O-': 'O-',
-        'other': 'Other'
-    }
+    Blood_Group_Options = [
+        ('A+', 'A+'),
+        ('A-', 'A-'),
+        ('B+', 'B+'),
+        ('B-', 'B-'),
+        ('AB+', 'AB+'),
+        ('AB-', 'AB-'),
+        ('O+', 'O+'),
+        ('O-', 'O-'),
+        ('other', 'Other')
+    ]
 
     Client_Name = models.CharField(max_length=50)
 
