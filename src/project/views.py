@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from src.dynamic.models import AboutPage, Archivements, Hyperlinks, InquiryDetails, Gallery
+from src.dynamic.models import AboutPage, Achivement, Hyperlink, InquiryDetail, Gallery
 from src.classes.models import ClassInfo
 
 # Fetcg all the gallery images
@@ -37,9 +37,9 @@ def about_view(request):
         'paragraph_description': table_data.paragraph_description
     }
     
-    # adding archivements from table to website
+    # adding achivements from table to website
     data['archivements'] = [
-        x.archivements for x in Archivements.objects.all()
+        x.archivements for x in Achivement.objects.all()
     ]
 
     # addinng hyperlinks in data
@@ -69,7 +69,7 @@ def save(request):
         mob = request.POST.get('mob')
         desc = request.POST.get('desc')
 
-        obj = InquiryDetails(fname=fname, lname=lname, email=email, mobile=mob, description=desc)
+        obj = InquiryDetail(fname=fname, lname=lname, email=email, mobile=mob, description=desc)
         obj.save()
 
         saved = True

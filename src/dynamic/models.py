@@ -19,13 +19,13 @@ class AboutPage(models.Model):
                self.img = vercel_blob_url
           super().save(*args, **kwargs)     
 
-class Archivements(models.Model):
+class Achivement(models.Model):
         archivements = models.CharField(("awards and archivements"), max_length=120)
 
         def __str__(self) -> str:
              return self.archivements.capitalize()
 
-class Hyperlinks(models.Model):
+class Hyperlink(models.Model):
     title = models.CharField(("Title for hyperlink"), max_length=50)
     link = models.URLField(("Hyperlink"), max_length=200)
 
@@ -45,7 +45,7 @@ class Hyperlinks(models.Model):
         else:
              return data
         
-class InquiryDetails(models.Model):
+class InquiryDetail(models.Model):
      fname = models.CharField(("fname"), max_length=50)
      lname = models.CharField(("lname"), max_length=50)
      email = models.EmailField(("email"), max_length=254)
