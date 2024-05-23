@@ -47,6 +47,9 @@ class User_Management(models.Model):
     Taking_Medicine = models.CharField(max_length=100)
     Reason_For_Joining = models.CharField(max_length=100)
 
+    class Meta:
+        verbose_name_plural = "Student Information"
+
     def save(self, *args, **kwargs):
         # Set Subscription_Date_To as Subscription_Date_From + 1 month
         self.Subscription_Date_To = self.Subscription_Date_From + timedelta(days=30)

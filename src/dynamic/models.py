@@ -12,6 +12,9 @@ class AboutPage(models.Model):
     paragraph_title  = models.CharField(max_length=50, default="Enter title here...")
     paragraph_description = models.TextField(default="Describe about your title mentioned above...")
 
+    class Meta:
+        verbose_name_plural = "About Page Information"
+
     def save(self, *args, **kwargs):
           if self.img:
                image_file = self.img.file.read()
@@ -22,12 +25,18 @@ class AboutPage(models.Model):
 class Archivements(models.Model):
         archivements = models.CharField(("awards and archivements"), max_length=120)
 
+        class Meta:
+            verbose_name_plural = "Achivements"
+
         def __str__(self) -> str:
              return self.archivements.capitalize()
 
 class Hyperlinks(models.Model):
     title = models.CharField(("Title for hyperlink"), max_length=50)
     link = models.URLField(("Hyperlink"), max_length=200)
+
+    class Meta:
+        verbose_name_plural = "Hyperlinks"
 
     def __str__(self) -> str:
          return f"{self.title}"
@@ -52,11 +61,17 @@ class InquiryDetails(models.Model):
      mobile = models.BigIntegerField(("mobile"))
      description = models.TextField(("description"))
 
+     class Meta:
+         verbose_name_plural = "Inquiry Details"
+
      def __str__(self) -> str:
           return f"{self.fname.capitalize()} {self.lname.capitalize()}"
      
 class Gallery(models.Model):
      gallery_image = models.ImageField(("Gallery Image"), upload_to=None, max_length=100, null=False)
+
+     class Meta:
+         verbose_name_plural = "Gallery Image's"
 
      def __str__(self) -> str:
           return self.gallery_image.url.strip("/")
