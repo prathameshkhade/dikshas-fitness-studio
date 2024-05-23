@@ -9,6 +9,9 @@ class ClassInfo(models.Model):
     class_time = models.CharField(("enter time"), max_length=50) 
     class_description = models.TextField(("enter description"))
 
+    class Meta:
+        verbose_name = "Classes Information"
+
     def __str__(self) -> str:
         return f"{self.class_title}"
     
