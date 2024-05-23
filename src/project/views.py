@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from src.dynamic.models import AboutPage, Achivement, Hyperlink, InquiryDetail, Gallery
+from src.dynamic.models import AboutPage, Archivements, Hyperlinks, InquiryDetails, Gallery
 from src.classes.models import ClassInfo
 
 # Fetcg all the gallery images
@@ -39,7 +39,7 @@ def about_view(request):
     
     # adding achivements from table to website
     data['archivements'] = [
-        x.archivements for x in Achivement.objects.all()
+        x.archivements for x in Archivements.objects.all()
     ]
 
     # addinng hyperlinks in data
