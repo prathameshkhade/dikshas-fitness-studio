@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os.path
 from pathlib import Path
 
+from os import environ as env
+
 # Settings for the Jazzmin admin panel
 from .jazzmin import JAZZMIN_SETTINGS
 
@@ -90,10 +92,10 @@ WSGI_APPLICATION = 'src.project.wsgi.app'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'verceldb',
-        'USER': 'default',
-        'PASSWORD': '1AwrqsyHENo2',
-        'HOST': 'ep-winter-art-a4xn18st-pooler.us-east-1.aws.neon.tech',
+        'NAME': env.get("POSTGRES_DATABASE"),
+        'USER': env.get("POSTGRES_USER"),
+        'PASSWORD': env.get("POSTGRES_PASSWORD"),
+        'HOST': env.get("POSTGRES_HOST"),
         'PORT': '5432',
     }
 }
