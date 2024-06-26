@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'src.dynamic',
     'src.classes',
     'src.User_Management',
+    'src.event',
 ]
 
 MIDDLEWARE = [
