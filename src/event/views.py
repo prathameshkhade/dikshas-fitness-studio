@@ -10,7 +10,8 @@ def home_view(request):
     })
 
 def eventDetails_view(request, slug):
-    obj = Events.objects.get(slug = slug)
+    obj = get_object_or_404(Events, slug=slug)
     return render(request, 'event/details.html', {
-        'event': obj
+        'event': obj,
+        'events': get_list_or_404(Events), 
     })

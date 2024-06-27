@@ -1,0 +1,164 @@
+{% extends "base.html" %} 
+
+{% block title %} {{ event.title }} {% endblock title%} 
+
+{% block content %}
+
+<!-- Infor Model -->
+<div class="infor-model-warp">
+  <div class="infor-model d-flex align-items-center">
+    <div class="infor-close">
+      <i class="material-icons">close</i>
+    </div>
+    <div class="infor-middle">
+      <a href="#" class="infor-logo">
+        <img src="img/logo-2.png" alt="" />
+      </a>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt.
+      </p>
+      <div class="insta-imgs">
+        <div class="insta-item">
+          <div class="insta-img">
+            <img src="img/infor/1.jpg" alt="" />
+            <div class="insta-hover">
+              <i class="fa fa-instagram"></i>
+              <p>ahana.yoga</p>
+            </div>
+          </div>
+        </div>
+        <div class="insta-item">
+          <div class="insta-img">
+            <img src="img/infor/2.jpg" alt="" />
+            <div class="insta-hover">
+              <i class="fa fa-instagram"></i>
+              <p>ahana.yoga</p>
+            </div>
+          </div>
+        </div>
+        <div class="insta-item">
+          <div class="insta-img">
+            <img src="img/infor/3.jpg" alt="" />
+            <div class="insta-hover">
+              <i class="fa fa-instagram"></i>
+              <p>ahana.yoga</p>
+            </div>
+          </div>
+        </div>
+        <div class="insta-item">
+          <div class="insta-img">
+            <img src="img/infor/4.jpg" alt="" />
+            <div class="insta-hover">
+              <i class="fa fa-instagram"></i>
+              <p>ahana.yoga</p>
+            </div>
+          </div>
+        </div>
+        <div class="insta-item">
+          <div class="insta-img">
+            <img src="img/infor/5.jpg" alt="" />
+            <div class="insta-hover">
+              <i class="fa fa-instagram"></i>
+              <p>ahana.yoga</p>
+            </div>
+          </div>
+        </div>
+        <div class="insta-item">
+          <div class="insta-img">
+            <img src="img/infor/6.jpg" alt="" />
+            <div class="insta-hover">
+              <i class="fa fa-instagram"></i>
+              <p>ahana.yoga</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="infor-form">
+        <input type="text" placeholder="Your Email" />
+        <button><img src="img/icons/send.png" alt="" /></button>
+      </form>
+      <div class="insta-social">
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Infor Model end -->
+
+<!-- Page top Section -->
+<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 m-auto text-white">
+        <h2>Event details</h2>
+        <p>
+          {{ event.title }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Page top Section end -->
+
+<!-- Event Details Section -->
+<section class="event-details-section spad overflow-hidden">
+  <div class="container">
+    <div class="event-preview">
+      <img src="{{ event.image.url }}" alt="{{ event.title }}" />
+    </div>
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="event-details">
+          <div class="row">
+            <div class="col-md-8">
+              <h2>{{ event.title }}</h2>
+              <div class="ed-meta">
+                <p>
+                  <i class="material-icons">alarm_on</i>{{ event.time }} Mins
+                </p>
+              </div>
+              <div class="ed-meta">
+                <p>
+                  <i class="material-icons">people_outline</i>250 People
+                  Registered
+                </p>
+              </div>
+            </div>
+            {% comment %}
+            <div class="col-md-4 text-left text-md-right">
+              <div class="ed-note">Advanced</div>
+            </div>
+            {% endcomment %}
+          </div>
+          <p>{{ event.description | safe }}</p>
+        </div>
+
+        <h3 class="comment-title">Other Events</h3>
+			{% for e in events %}
+                <div class="event-other-slider owl-carousel">
+                    <div class="event-item">
+                        <div class="ei-img">
+                            <img src="{{ e.image.url }}" alt="{{ e.title }}">
+                        </div>
+                        <div class="ei-text">
+                            <h4><a href="/events/{{ e.slug }}">{{ e.title }}</a></h4>
+                            <ul>
+                                <li><i class="material-icons">person</i>Diksha Kadam</li>
+                                <li><i class="material-icons">event_available</i>{{ e.date }}</li>
+                                <li><i class="material-icons">map</i>At Diksha Fitness Studio</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Event Details Section end -->
+
+{% endblock content %}
