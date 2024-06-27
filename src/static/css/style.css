@@ -509,14 +509,15 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	visibility: hidden;
 	opacity: 0;
 	margin-top: 50px;
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(0, 0, 0, 0.5);
+	background: rgba(255, 255, 255, 0.1);
 	z-index: 99;
 	text-align: left;
 	-webkit-transition: 0.4s;
 	-o-transition: 0.4s;
 	transition: 0.4s;
-	backdrop-filter: blur(4px);
-	border-radius: 10px;
+	backdrop-filter: blur(4px) !important;
+	border-radius: 12px;
 }
 
 .main-menu .sub-menu:after {
@@ -2171,11 +2172,13 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
+	border: #000 solid 1px;
 }
 
 .event-item:hover {
 	-webkit-box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.15);
-	box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.15);
+	box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.5);
+	scale: 105%;
 }
 
 .event-item:last-child {
