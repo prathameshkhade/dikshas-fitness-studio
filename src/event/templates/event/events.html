@@ -126,127 +126,27 @@
 <section class="events-page-section spad">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <div class="event-item">
-                    <div class="ei-img">
-                        <img src="img/event/1.jpg" alt="">
-                    </div>
-                    <div class="ei-text">
-                        <h4><a href="event-details.html">Lole White Yoga Tour</a></h4>
-                        <ul>
-                            <li><i class="material-icons">person</i>Kelly Alexander</li>
-                            <li><i class="material-icons">event_available</i>15 January, 2019</li>
-                            <li><i class="material-icons">map</i>184 Main Collins Street</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="event-item">
-                    <div class="ei-img">
-                        <img src="img/event/2.jpg" alt="">
-                    </div>
-                    <div class="ei-text">
-                        <h4>Free Yoga Madrid</h4>
-                        <ul>
-                            <li><i class="material-icons">person</i>Kelly Alexander</li>
-                            <li><i class="material-icons">event_available</i>15 January, 2019</li>
-                            <li><i class="material-icons">map</i>184 Main Collins Street</li>
-                        </ul>
+
+            {% for event in events %}
+                <div class="col-lg-6">
+                    <div class="event-item">
+                        <div class="ei-img">
+                            <img src="{{ event.image.url }}" alt="">
+                        </div>
+                        <div class="ei-text">
+                            <h4><a href="/events/{{ event.slug }}">{{ event.title }}</a></h4>
+                            <ul>
+                                <li><i class="material-icons">person</i>Diksha Kadam</li>
+                                <li><i class="material-icons">event_available</i>{{ event.date }}</li>
+                                <li><i class="material-icons">map</i>At Diksha Fitness Studio</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="event-item">
-                    <div class="ei-img">
-                        <img src="img/event/3.jpg" alt="">
-                    </div>
-                    <div class="ei-text">
-                        <h4>One Love Dallas</h4>
-                        <ul>
-                            <li><i class="material-icons">person</i>Kelly Alexander</li>
-                            <li><i class="material-icons">event_available</i>15 January, 2019</li>
-                            <li><i class="material-icons">map</i>184 Main Collins Street</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="event-item">
-                    <div class="ei-img">
-                        <img src="img/event/4.jpg" alt="">
-                    </div>
-                    <div class="ei-text">
-                        <h4>Get on Your Mat</h4>
-                        <ul>
-                            <li><i class="material-icons">person</i>Kelly Alexander</li>
-                            <li><i class="material-icons">event_available</i>15 January, 2019</li>
-                            <li><i class="material-icons">map</i>184 Main Collins Street</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="event-item">
-                    <div class="ei-img">
-                        <img src="img/event/5.jpg" alt="">
-                    </div>
-                    <div class="ei-text">
-                        <h4>Solstice in Times Square</h4>
-                        <ul>
-                            <li><i class="material-icons">person</i>Kelly Alexander</li>
-                            <li><i class="material-icons">event_available</i>15 January, 2019</li>
-                            <li><i class="material-icons">map</i>184 Main Collins Street</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="event-item">
-                    <div class="ei-img">
-                        <img src="img/event/6.jpg" alt="">
-                    </div>
-                    <div class="ei-text">
-                        <h4>Athleta Mind Over</h4>
-                        <ul>
-                            <li><i class="material-icons">person</i>Kelly Alexander</li>
-                            <li><i class="material-icons">event_available</i>15 January, 2019</li>
-                            <li><i class="material-icons">map</i>184 Main Collins Street</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="event-item">
-                    <div class="ei-img">
-                        <img src="img/event/7.jpg" alt="">
-                    </div>
-                    <div class="ei-text">
-                        <h4>Mega-Yoga Classes</h4>
-                        <ul>
-                            <li><i class="material-icons">person</i>Kelly Alexander</li>
-                            <li><i class="material-icons">event_available</i>15 January, 2019</li>
-                            <li><i class="material-icons">map</i>184 Main Collins Street</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="event-item">
-                    <div class="ei-img">
-                        <img src="img/event/8.jpg" alt="">
-                    </div>
-                    <div class="ei-text">
-                        <h4>Yoga Festivals</h4>
-                        <ul>
-                            <li><i class="material-icons">person</i>Kelly Alexander</li>
-                            <li><i class="material-icons">event_available</i>15 January, 2019</li>
-                            <li><i class="material-icons">map</i>184 Main Collins Street</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+
         </div>
+
         <div class="site-pagination pt-3">
             <a href="#" class="active">1</a>
             <a href="#">2</a>

@@ -9,3 +9,5 @@ requests==2.18.4
 sqlparse==0.5.0
 urllib3==1.21.1
 vercel_storage
+django-tinymce==4.1.0
+django-autoslug==1.9.9

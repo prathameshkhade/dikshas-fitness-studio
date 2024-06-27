@@ -2167,8 +2167,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	margin-bottom: 30px;
 	border-radius: 14px;
 	overflow: hidden;
-	-webkit-box-shadow: 0px 5px 6px rgba(72, 105, 114, 0.15);
-	box-shadow: 0px 5px 6px rgba(72, 105, 114, 0.15);
+	-webkit-box-shadow: 0px 5px 6px rgba(129, 92, 67, 0.15);
+	box-shadow: 0px 5px 6px rgba(155, 109, 48, 0.15);
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
@@ -2176,8 +2176,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
 }
 
 .event-item:hover {
-	-webkit-box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.15);
-	box-shadow: 0px 12px 32px rgba(72, 105, 114, 0.5);
+	-webkit-box-shadow: 0px 12px 32px rgba(112, 67, 25, 0.15);
+	box-shadow: 0px 12px 32px rgba(241, 137, 38, 0.5);
 	scale: 105%;
 }
 
