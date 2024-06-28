@@ -2732,6 +2732,7 @@ only screen and (min-width: 576px) and (max-width: 767px),
 }
 
 .page-top-section p {
+	margin-top: 30px;
 	font-size: 18px;
 }
 
@@ -3418,7 +3419,6 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	border-radius: 12px;
 	margin-bottom: 40px;
 	min-width: 100%;
-	object-fit: contain;
 }
 
 .event-details {

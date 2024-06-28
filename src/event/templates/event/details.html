@@ -95,9 +95,7 @@
     <div class="row">
       <div class="col-lg-7 m-auto text-white">
         <h2>Event details</h2>
-        <p>
-          {{ event.title }}
-        </p>
+        <p>{{ event.title }}</p>
       </div>
     </div>
   </div>
@@ -123,8 +121,7 @@
               </div>
               <div class="ed-meta">
                 <p>
-                  <i class="material-icons">people_outline</i>250 People
-                  Registered
+                  <i class="material-icons">people_outline</i>250 People Registered
                 </p>
               </div>
             </div>
@@ -138,23 +135,23 @@
         </div>
 
         <h3 class="comment-title">Other Events</h3>
-			{% for e in events %}
-                <div class="event-other-slider owl-carousel">
-                    <div class="event-item">
-                        <div class="ei-img">
-                            <img src="{{ e.image.url }}" alt="{{ e.title }}">
-                        </div>
-                        <div class="ei-text">
-                            <h4><a href="/events/{{ e.slug }}">{{ e.title }}</a></h4>
-                            <ul>
-                                <li><i class="material-icons">person</i>Diksha Kadam</li>
-                                <li><i class="material-icons">event_available</i>{{ e.date }}</li>
-                                <li><i class="material-icons">map</i>At Diksha Fitness Studio</li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="event-other-slider owl-carousel">
+            {% for e in events %}
+              <div class="event-item">
+                <div class="ei-img">
+                  <img src="{{ e.image.url }}" alt="{{ e.title }}" />
                 </div>
+                <div class="ei-text">
+                  <h4><a href="/events/{{ e.slug }}">{{ e.title }}</a></h4>
+                  <ul>
+                    <li><i class="material-icons">person</i>Diksha Kadam</li>
+                    <li><i class="material-icons">event_available</i>{{ e.date }}</li>
+                    <li><i class="material-icons">map</i>At Diksha Fitness Studio</li>
+                  </ul>
+                </div>
+              </div>
             {% endfor %}
+          </div>
       </div>
     </div>
   </div>
