@@ -1,12 +1,28 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
-
+import datetime
 from .models import Events
 
 def home_view(request):
-    events_objects = Events.objects.all()
-    print(events_objects)
+    events = Events.objects.all()
+
+    date = request.GET.get('eventDate', '')
+    if date != '':
+        date = datetime.datetime.strptime(request.GET.get('eventDate', ''), '%m/%d/%Y').date()
+        print(date)
+    search = request.GET.get('search', '')
+
+    if (date != '' and search):
+        pass
+    elif (search):
+        events = events.filter(title__icontains=search)
+    elif (date != ''):
+        events = events.filter(date__icontains=date)
+
+
     return render(request, 'event/events.html', {
-        'events': events_objects
+        'events': events,
+        'dateValue': date,
+        'searchValue': search
     })
 
 def eventDetails_view(request, slug):

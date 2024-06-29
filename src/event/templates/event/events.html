@@ -4,88 +4,6 @@
 
 {% block content %}
 
-<!-- Infor Model -->
-<div class="infor-model-warp">
-    <div class="infor-model d-flex align-items-center">
-        <div class="infor-close">
-            <i class="material-icons">close</i>
-        </div>
-        <div class="infor-middle">
-            <a href="#" class="infor-logo">
-                <img src="img/logo-2.png" alt="">
-            </a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            <div class="insta-imgs">
-                <div class="insta-item">
-                    <div class="insta-img">
-                        <img src="img/infor/1.jpg" alt="">
-                        <div class="insta-hover">
-                            <i class="fa fa-instagram"></i>
-                            <p>ahana.yoga</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="insta-item">
-                    <div class="insta-img">
-                        <img src="img/infor/2.jpg" alt="">
-                        <div class="insta-hover">
-                            <i class="fa fa-instagram"></i>
-                            <p>ahana.yoga</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="insta-item">
-                    <div class="insta-img">
-                        <img src="img/infor/3.jpg" alt="">
-                        <div class="insta-hover">
-                            <i class="fa fa-instagram"></i>
-                            <p>ahana.yoga</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="insta-item">
-                    <div class="insta-img">
-                        <img src="img/infor/4.jpg" alt="">
-                        <div class="insta-hover">
-                            <i class="fa fa-instagram"></i>
-                            <p>ahana.yoga</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="insta-item">
-                    <div class="insta-img">
-                        <img src="img/infor/5.jpg" alt="">
-                        <div class="insta-hover">
-                            <i class="fa fa-instagram"></i>
-                            <p>ahana.yoga</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="insta-item">
-                    <div class="insta-img">
-                        <img src="img/infor/6.jpg" alt="">
-                        <div class="insta-hover">
-                            <i class="fa fa-instagram"></i>
-                            <p>ahana.yoga</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form class="infor-form">
-                <input type="text" placeholder="Your Email">
-                <button><img src="img/icons/send.png" alt=""></button>
-            </form>
-            <div class="insta-social">
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-facebook"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Infor Model end -->
-
 <!-- Page top Section -->
 <section class="page-top-section page-sp set-bg" data-setbg="img/page-top-bg.jpg">
     <div class="container">
@@ -103,19 +21,24 @@
     <div class="event-filter-warp">
         <div class="row">
             <div class="col-xl-3">
-                <p>Showing 8 eventes of 30 eventes</p>
+                <p> {{ events|length }} evnets found</p>
             </div>
             <div class="col-xl-9">
-                <form class="event-filter-form">
+                <form class="event-filter-form" method="GET" action="{% url "event:home" %}">
                     <div class="ef-item">
-                        <input type="text" placeholder="Event Date" class="event-date">
+                        <input type="text" name="eventDate" placeholder="Event Date" class="event-date"
+                            {% if dateValue %} value='{{ dateValue }}' {% endif %}
+                        >
                         <i class="material-icons">event_available</i>
+                        {% comment %} <input type="date" name="eventDate" placeholder="Event Date"> {% endcomment %}
                     </div>
                     <div class="ef-item">
-                        <input type="text" placeholder="Search">
+                        <input type="text" placeholder="Search" name="search"
+                        {% if searchValue %} value='{{ searchValue }}' {% endif %}
+                        >
                         <i class="material-icons">search</i>
                     </div>
-                    <button class="site-btn sb-gradient">Find Event</button>
+                    <input type='submit' value="Find Event" class="site-btn sb-gradient" ></input>
                 </form>
             </div>
         </div>
@@ -127,31 +50,35 @@
     <div class="container">
         <div class="row">
 
-            {% for event in events %}
-                <div class="col-lg-6">
-                    <div class="event-item">
-                        <div class="ei-img">
-                            <img src="{{ event.image.url }}" alt="">
+                {% if events|length > 0 %}
+                        {% for event in events %}
+                        <div class="col-lg-6">
+                            <div class="event-item">
+                                <div class="ei-img">
+                                    <img src="{{ event.image.url }}" alt="">
+                                </div>
+                                <div class="ei-text">
+                                    <h4><a href="/events/{{ event.slug }}">{{ event.title }}</a></h4>
+                                    <ul>
+                                        <li><i class="material-icons">person</i>Diksha Kadam</li>
+                                        <li><i class="material-icons">event_available</i>{{ event.date }}</li>
+                                        <li><i class="material-icons">map</i>At Diksha Fitness Studio</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="ei-text">
-                            <h4><a href="/events/{{ event.slug }}">{{ event.title }}</a></h4>
-                            <ul>
-                                <li><i class="material-icons">person</i>Diksha Kadam</li>
-                                <li><i class="material-icons">event_available</i>{{ event.date }}</li>
-                                <li><i class="material-icons">map</i>At Diksha Fitness Studio</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+                    {% endfor %}
+                {% else %}
+                        <h3>No data found!</h3>
+                {% endif %}
 
         </div>
 
-        <div class="site-pagination pt-3">
+        {% comment %} <div class="site-pagination pt-3">
             <a href="#" class="active">1</a>
             <a href="#">2</a>
             <a href="#"><i class="material-icons">keyboard_arrow_right</i></a>
-        </div>
+        </div> {% endcomment %}
     </div>
 </section>
 <!-- Events Section end -->
