@@ -11,6 +11,7 @@
 	<meta name="description" content="Ahana Yoga HTML Template">
 	<meta name="keywords" content="yoga, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
 	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}"/>
@@ -33,6 +34,44 @@
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
+
+	<!-- Infor Model -->
+	<div class="infor-model-warp">
+		<div class="infor-model d-flex align-items-center">
+			<div class="infor-close">
+				<i class="material-icons">close</i>
+			</div>
+			<div class="infor-middle">
+				<a href="#" class="infor-logo">
+					<img src="{% static 'img/logo.png' %}" alt="">
+				</a>
+				<p>Practice Yoga to perfect physical beauty, take care of your soul and enjoy life more fully!</p>
+				<div class="insta-imgs">
+					{% for i in '123456' %}
+					<div class="insta-item">
+						<div class="insta-img">
+							<img src="{% static 'img/infor/'|add:i|add:'.jpg' %}" alt="">
+							<div class="insta-hover">
+								<i class="fa fa-instagram"></i>
+								<p>diksha_fitness_studio</p>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				
+				{% comment %} 
+				<div class="insta-social">
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-facebook"></i></a>
+				</div> 
+				{% endcomment %}
+			</div>
+		</div>
+	</div>
+	<!-- Infor Model end -->
 
 	
     {% include "header.html" %}
