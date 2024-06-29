@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from src.dynamic.models import AboutPage, Archivements, Hyperlinks, InquiryDetails, Gallery
 from src.classes.models import ClassInfo
 
-# Fetcg all the gallery images
+# Fetch all the gallery images
 gallery_images  = Gallery.objects.all().values_list('gallery_image', flat=True).distinct()
 
 # Create your views here
@@ -69,7 +69,7 @@ def save(request):
         mob = request.POST.get('mob')
         desc = request.POST.get('desc')
 
-        obj = InquiryDetail(fname=fname, lname=lname, email=email, mobile=mob, description=desc)
+        obj = InquiryDetails(fname=fname, lname=lname, email=email, mobile=mob, description=desc)
         obj.save()
 
         saved = True
