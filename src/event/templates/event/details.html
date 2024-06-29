@@ -105,7 +105,7 @@
 <!-- Event Details Section -->
 <section class="event-details-section spad overflow-hidden">
   <div class="container">
-    <div class="event-preview">
+    <div class="event-preview" id="slide">
       <img src="{{ event.image.url }}" alt="{{ event.title }}" />
     </div>
     <div class="row">
@@ -121,7 +121,7 @@
               </div>
               <div class="ed-meta">
                 <p>
-                  <i class="material-icons">people_outline</i>250 People Registered
+                  <i class="material-icons">people_outline</i>50+ People Registered
                 </p>
               </div>
             </div>
@@ -157,5 +157,26 @@
   </div>
 </section>
 <!-- Event Details Section end -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  gsap.from("#slide", {
+    y: 500,
+    opacity: 0,
+    duration: 1.2,
+
+    scrollTrigger: {
+      trigger: '#slide',
+      scroller: 'body',
+      start: "top 130%",
+      end: "top 150%",
+      markers: true,
+      scrub: 2.5,
+    }
+  })
+</script>
 
 {% endblock content %}

@@ -4324,3 +4324,11 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	background-color: rgba(255, 255, 255, 0.353);
 	backdrop-filter: blur(10px);
   }
+
+.top {
+	border-radius: 12px;
+	margin-bottom: 40px;
+	min-width: 100%;
+	background: #000;
+	width: auto;
+}
