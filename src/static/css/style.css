@@ -668,6 +668,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 .infor-model-warp.active {
 	display: block;
+	background: hsla(0, 0%, 0%, 0.65);
+	backdrop-filter: blur(4px);
 }
 
 .infor-model-warp.active .infor-model {
@@ -682,7 +684,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	width: 525px;
 	height: 100%;
 	text-align: center;
-	background: #fff;
+	/* background: hsla(0, 0%, 0%, 0.5); */
+	background: white;
 	-webkit-box-shadow: 15px 0px 32px rgba(72, 105, 114, 0.4);
 	box-shadow: 15px 0px 32px rgba(72, 105, 114, 0.4);
 	-webkit-transform: translateX(110%);
@@ -691,6 +694,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px),
@@ -767,9 +772,10 @@ only screen and (min-width: 576px) and (max-width: 767px),
 }
 
 .insta-imgs .insta-img {
-	border-radius: 7px;
+	border-radius: 9px;
 	overflow: hidden;
 	position: relative;
+	border: solid black 1px
 }
 
 .insta-imgs .insta-img:after {
