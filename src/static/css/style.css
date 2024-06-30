@@ -394,10 +394,15 @@ only screen and (min-width: 576px) and (max-width: 767px),
 	float: left;
 	position: relative;
 	z-index: 9;
+	max-width: 22vw;
 }
 
 .header-bottom {
-	padding: 25px 80px 0;
+	padding: 15px 80px 0;
+	display: flexbox;
+	align-items: center;
+	min-height: 14dvh;
+	max-height: 15dvh;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -715,10 +720,10 @@ only screen and (min-width: 576px) and (max-width: 767px),
 
 .infor-close {
 	position: absolute;
-	right: 70px;
-	top: 55px;
+	right: 30px;
+	top: 38px;
 	font-size: 23px;
-	color: #9999;
+	color: hsl(34, 100%, 50%);
 	cursor: pointer;
 	padding: 5px;
 }
