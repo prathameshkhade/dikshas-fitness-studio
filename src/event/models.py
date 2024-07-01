@@ -1,6 +1,6 @@
 from django.db import models
 from tinymce.models import HTMLField
-from autoslug.fields import AutoSlugField
+from src.utils import generate_slug
 
 class Events(models.Model):
     class Meta:
@@ -11,4 +11,8 @@ class Events(models.Model):
     image = models.ImageField(("Image"), upload_to=None, max_length=150, default="staticfiles/static/img/classes/3.jpg")
     time = models.PositiveIntegerField(("Total event time (duration in minutes):"), default=60)
     description = HTMLField()
-    slug = AutoSlugField(populate_from='title', unique=True, null=True, default=None)
+    slug = models.SlugField(unique=True, null=True, default=None)
+
+    def save(self, *args, **kwargs):
+        self.slug = generate_slug(string=self.title, model=Events)
+        super().save(*args, **kwargs)

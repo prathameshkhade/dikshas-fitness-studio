@@ -16,7 +16,6 @@ psycopg2 = "^2.9.9"
 psycopg2-binary = "^2.9.9"
 vercel-storage = "^0.0.1"
 django-tinymce = "^4.1.0"
-django-autoslug = "^1.9.9"
 
 
 [build-system]

@@ -170,21 +170,6 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
-name = "django-autoslug"
-version = "1.9.9"
-description = "An automated slug field for Django."
-optional = false
-python-versions = "*"
-files = [
-    {file = "django-autoslug-1.9.9.tar.gz", hash = "sha256:79f88e9433c1c88d8d3f2bec60d65ca98bffaff6c072b78aa5fd99d0e84a13dd"},
-    {file = "django_autoslug-1.9.9-py2.py3-none-any.whl", hash = "sha256:81cb018944498f27f439d439687cf902212cafbdb8c74c8ca0307543a3d82907"},
-]
-
-[package.extras]
-cyrillic = ["pytils (>=0.2)"]
-translitcodec = ["translitcodec (>=0.3)"]
-
-[[package]]
 name = "django-jazzmin"
 version = "3.0.0"
 description = "Drop-in theme for django admin, that utilises AdminLTE 3 & Bootstrap 4 to make yo' admin look jazzy"
@@ -545,4 +530,4 @@ test = ["mypy", "pytest", "pytest-cov", "requests-mock[fixture]"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "982b4edb77c2d9fc38ebc8655f69c07b9d735cb9949bca8f45101ddc982f656d"
+content-hash = "8620915ff4e616fb7e7a1287b5e2c567e97d875bc7441a6f9882158fa1b9a6cf"
