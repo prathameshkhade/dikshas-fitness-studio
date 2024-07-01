@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %} Events {% endblock title %}
 
 {% block content %}
@@ -51,9 +53,11 @@
         <div class="row">
 
                 {% if events|length > 0 %}
-                        {% for event in events %}
+                    {% for event in events %}
                         <div class="col-lg-6">
-                            <div class="event-item">
+                            <div class="event-item"
+                                id={% if forloop.counter|divisibleby:2 %} 'right' {% else %} 'left' {% endif %}
+                            >
                                 <div class="ei-img">
                                     <img src="{{ event.image.url }}" alt="">
                                 </div>
@@ -69,7 +73,7 @@
                         </div>
                     {% endfor %}
                 {% else %}
-                        <h3>No data found!</h3>
+                        <h3 align='center'>No data found!</h3>
                 {% endif %}
 
         </div>
@@ -82,5 +86,7 @@
     </div>
 </section>
 <!-- Events Section end -->
+
+<script src="{% static "js/animations/event.js" %}"></script>
 
 {% endblock content %}
