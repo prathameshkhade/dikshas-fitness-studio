@@ -2,12 +2,14 @@
 
 {% load static %}
 
+{% load static %}
+
 {% block title %} Events {% endblock title %}
 
 {% block content %}
 
 <!-- Page top Section -->
-<section class="page-top-section page-sp set-bg" data-setbg="img/page-top-bg.jpg">
+<section class="page-top-section page-sp set-bg" data-setbg="{% static "img/page-top-bg.jpg" %}">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 m-auto text-white">
@@ -59,10 +61,10 @@
                                 id={% if forloop.counter|divisibleby:2 %} 'right' {% else %} 'left' {% endif %}
                             >
                                 <div class="ei-img">
-                                    <img src="{{ event.image.url }}" alt="">
+                                    <img src="{{ event.image.name }}" alt="">
                                 </div>
                                 <div class="ei-text">
-                                    <h4><a href="/events/{{ event.slug }}">{{ event.title }}</a></h4>
+                                    <h4><a href="/events/{{ event.slug }}">{{ event.title | capfirst | safe }}</a></h4>
                                     <ul>
                                         <li><i class="material-icons">person</i>Diksha Kadam</li>
                                         <li><i class="material-icons">event_available</i>{{ event.date }}</li>

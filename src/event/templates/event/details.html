@@ -1,16 +1,18 @@
 {% extends "base.html" %} 
 
+{% load static %}
+
 {% block title %} {{ event.title }} {% endblock title%} 
 
 {% block content %}
 
 <!-- Page top Section -->
-<section class="page-top-section set-bg" data-setbg="img/page-top-bg.jpg">
+<section class="page-top-section set-bg" data-setbg="{% static "img/page-top-bg.jpg" %}">
   <div class="container">
     <div class="row">
       <div class="col-lg-7 m-auto text-white">
         <h2>Event details</h2>
-        <p>{{ event.title }}</p>
+        <p>{{ event.title | capfirst}}</p>
       </div>
     </div>
   </div>
@@ -21,14 +23,14 @@
 <section class="event-details-section spad overflow-hidden">
   <div class="container">
     <div class="event-preview" id="slide">
-      <img src="{{ event.image.url }}" alt="{{ event.title }}" />
+      <img src="{{ event.image.name }}" alt="{{ event.title | capfirst }}" />
     </div>
     <div class="row">
       <div class="col-lg-9">
         <div class="event-details">
           <div class="row">
             <div class="col-md-8">
-              <h2>{{ event.title }}</h2>
+              <h2>{{ event.title | capfirst }}</h2>
               <div class="ed-meta">
                 <p>
                   <i class="material-icons">alarm_on</i>{{ event.time }} Mins
@@ -46,7 +48,7 @@
             </div>
             {% endcomment %}
           </div>
-          <p>{{ event.description | safe }}</p>
+          <p>{{ event.description | safe | capfirst }}</p>
         </div>
 
         <h3 class="comment-title">Other Events</h3>
@@ -54,10 +56,10 @@
             {% for e in events %}
               <div class="event-item">
                 <div class="ei-img">
-                  <img src="{{ e.image.url }}" alt="{{ e.title }}" />
+                  <img src="{{ e.image.name }}" alt="{{ e.title | capfirst }}" />
                 </div>
                 <div class="ei-text">
-                  <h4><a href="/events/{{ e.slug }}">{{ e.title }}</a></h4>
+                  <h4><a href="/events/{{ e.slug }}">{{ e.title | capfirst }}</a></h4>
                   <ul>
                     <li><i class="material-icons">person</i>Diksha Kadam</li>
                     <li><i class="material-icons">event_available</i>{{ e.date }}</li>
