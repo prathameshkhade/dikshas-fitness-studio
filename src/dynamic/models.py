@@ -1,5 +1,4 @@
 from django.db import models
-from vercel_storage import blob
 
 # Create your models here.
 class AboutPage(models.Model):
@@ -13,14 +12,7 @@ class AboutPage(models.Model):
     paragraph_description = models.TextField(default="Describe about your title mentioned above...")
 
     class Meta:
-        verbose_name_plural = "About Page Information"
-
-    def save(self, *args, **kwargs):
-          if self.img:
-               image_file = self.img.file.read()
-               vercel_blob_url = blob.put(pathname=f"media/about/{self.img.name}", body=image_file, options={"no_suffix": True})["url"]
-               self.img = vercel_blob_url
-          super().save(*args, **kwargs)     
+        verbose_name_plural = "About Page Information"    
 
 class Archivements(models.Model):
         archivements = models.CharField(("awards and archivements"), max_length=120)
@@ -68,20 +60,10 @@ class InquiryDetails(models.Model):
           return f"{self.fname.capitalize()} {self.lname.capitalize()}"
      
 class Gallery(models.Model):
-     gallery_image = models.ImageField(("Gallery Image"), upload_to=None, max_length=100, null=False)
+     gallery_image = models.ImageField(("Gallery Image"), upload_to='gallery/', max_length=100, null=False)
 
      class Meta:
          verbose_name_plural = "Gallery Image's"
 
      def __str__(self) -> str:
           return self.gallery_image.url.strip("/")
-     
-     def save(self, *args, **kwargs):
-          if self.gallery_image:
-               image_file = self.gallery_image.file.read()
-               vercel_blob_url = blob.put(pathname=f"media/gallery/{self.gallery_image.name}", body=image_file, options={"no_suffix": True})["url"]
-               self.gallery_image = vercel_blob_url
-          super().save(*args, **kwargs)
-
-     def __del__(self) -> None:
-          blob.delete(pathname=f"media/gallery/{self.gallery_image}")
