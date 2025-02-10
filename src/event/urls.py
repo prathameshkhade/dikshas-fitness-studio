@@ -6,5 +6,5 @@ app_name = 'event'
 
 urlpatterns = [
     path('', views.home_view, name='home'),
-    path('/<slug:slug>', views.eventDetails_view)
+    path('<slug:slug>', views.eventDetails_view)
 ]

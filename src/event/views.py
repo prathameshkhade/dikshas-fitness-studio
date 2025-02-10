@@ -7,6 +7,7 @@ from src.dynamic.models import Gallery
 gallery_images  = Gallery.objects.all().values_list('gallery_image', flat=True).distinct()
 
 def home_view(request):
+    
     events = Events.objects.all()
 
     date = request.GET.get('eventDate', '')
