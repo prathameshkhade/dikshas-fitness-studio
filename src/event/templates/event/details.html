@@ -23,7 +23,7 @@
 <section class="event-details-section spad overflow-hidden">
   <div class="container">
     <div class="event-preview" id="slide">
-      <img src="{{ event.image.name }}" alt="{{ event.title | capfirst }}" />
+      <img src="{% get_media_prefix %}{{ event.image.name }}" alt="{{ event.title | capfirst }}" />
     </div>
     <div class="row">
       <div class="col-lg-9">

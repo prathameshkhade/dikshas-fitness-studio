@@ -61,7 +61,7 @@
                                 id={% if forloop.counter|divisibleby:2 %} 'right' {% else %} 'left' {% endif %}
                             >
                                 <div class="ei-img">
-                                    <img src="{{ event.image.name }}" alt="">
+                                    <img src="media/{{ event.image.name }}" alt="">
                                 </div>
                                 <div class="ei-text">
                                     <h4><a href="/events/{{ event.slug }}">{{ event.title | capfirst | safe }}</a></h4>

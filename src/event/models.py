@@ -8,7 +8,7 @@ class Events(models.Model):
 
     title = models.CharField(("Event title"), max_length=50)
     date = models.DateTimeField(("Date and Time of the event"), auto_now=False, auto_now_add=False)
-    image = models.ImageField(("Image"), upload_to=None, max_length=150, default="static/img/classes/3.jpg")
+    image = models.ImageField(("Image"), upload_to='events/', max_length=150, default="static/img/classes/3.jpg")
     time = models.PositiveIntegerField(("Total event time (duration in minutes):"), default=60)
     description = HTMLField()
     slug = models.SlugField(unique=True, null=True, default=None, blank=True)
