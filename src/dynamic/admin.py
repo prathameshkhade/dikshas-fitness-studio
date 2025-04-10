@@ -19,3 +19,4 @@ admin.site.register(InquiryDetails)
 admin.site.register(Archivements)
 admin.site.register(Hyperlinks)
 admin.site.register(Gallery)
+
